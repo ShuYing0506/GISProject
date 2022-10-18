@@ -1,0 +1,6 @@
+---
+title: "Methodology"
+editor: visual
+---
+
+this is the methodology

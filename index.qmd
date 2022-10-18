@@ -1,5 +1,15 @@
 ---
-title: "GISProject"
+title: "GISProjectGroup7"
 ---
 
-Welcome to our GIS Project web site.
+Welcome to our GIS Project web site. Our group title is
+
+## Data Used:
+
+The data used are as follows:
+
+## Scope of work:
+
+The scope of work are as follows:
+
+Our Github Link:

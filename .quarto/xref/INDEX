@@ -7,5 +7,17 @@
   },
   "overview.qmd": {
     "overview.html": "264b5f76"
+  },
+  "methodology.qmd": {
+    "methodology.html": "c7131a67"
+  },
+  "analysis.qmd": {
+    "analysis.html": "d12ae368"
+  },
+  "findings.qmd": {
+    "findings.html": "39e51015"
+  },
+  "schedule.qmd": {
+    "schedule.html": "dabd7d39"
   }
 }
