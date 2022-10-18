@@ -18,7 +18,6 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - about.qmd
       - href: schedule.qmd
         text: Project Schedule
 
