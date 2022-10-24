@@ -5,11 +5,7 @@ editor: visual
 
 ## Introduction
 
-In this project, we are given two themes and sub-themes. Detail description of this project is available on this [page](https://smt201-ay2022-23t1.netlify.app/gisproject). Land cover classification is a commonly application area of digital image analysis.
-
-## Literature review
-
-In this project, the following articles will be reviewed.
+In this project, we are given two themes and sub-themes. Detail description of this project is available on this [page](https://smt201-ay2022-23t1.netlify.app/gisproject).
 
 ## Motivation:
 
@@ -24,5 +20,19 @@ The objective of this project are as follows:
 ## Tasks
 
 The project tasks are as follows:
+
+## Literature review
+
+In this project, the following articles will be reviewed.
+
+-   https://www.straitstimes.com/singapore/education/2019-school-mergers-7-things-to-know
+
+-   https://www.channelnewsasia.com/singapore/moe-schools-merging-new-town-tanglin-telok-kurau-201401
+
+-   https://www.straitstimes.com/singapore/education/school-mergers-2019-why-were-the-8-government-jcs-the-ones-selected-for-merger
+
+-   https://www.gov.sg/article/why-is-the-ministry-of-education-merging-some-schools
+
+-   https://guidesify.com/merger-of-jcs-singapore/
 
 ## 

@@ -3,4 +3,12 @@ title: "Methodology"
 editor: visual
 ---
 
-this is the methodology
+-   a detail documentation of the methods used.
+
+***The methodology used:***
+
+We would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2019 to future years in 2022-2024.
+
+Before we proceed with the data collection stage, we read through articles to understand the mergers of the schools during these few years. All the articles that we have referred to are stated in the [Overview](http://localhost:7684/overview.html) page.
+
+For the year of 2019, since we do not have the school Dataset for Year 2019, we used the Dataset from Year 2021 from data.gov.sg (School Directory and Information) and input more schools to form a completed version of Dataset before we proceed get to proceed on with Geocoding. We have also checked through all the addresses and input Latlong so that all the schools can be found in the OSM without having the possibility to omit any schools during the data Geocoding process.

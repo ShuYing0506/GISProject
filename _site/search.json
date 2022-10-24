@@ -9,58 +9,58 @@
   {
     "objectID": "analysis.html",
     "href": "analysis.html",
-    "title": "Analysis",
+    "title": "Results & Analysis",
     "section": "",
     "text": "The results used in this project are as follows:\n\nData 1:"
   },
   {
     "objectID": "analysis.html#analysis",
     "href": "analysis.html#analysis",
-    "title": "Analysis",
+    "title": "Results & Analysis",
     "section": "Analysis",
     "text": "Analysis\nThe project tasks are as follows:"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "GISProjectGroup7",
+    "title": "GIS Project Group7",
     "section": "",
-    "text": "Welcome to our GIS Project web site. Our group title is"
+    "text": "Welcome to our GIS Project web site. Our group is working on Theme 2: Geography of Accessibility with GIS-based Network Analysis and on specific sub-theme 1: Impact of closures or mergers of education institutions on equity of access."
   },
   {
     "objectID": "index.html#data-used",
     "href": "index.html#data-used",
-    "title": "GISProjectGroup7",
+    "title": "GIS Project Group7",
     "section": "Data Used:",
-    "text": "Data Used:\nThe data used are as follows:"
+    "text": "Data Used:\nThe data used are as follows:\n\nData.gov (School Directory and Information 24 March Year 2021)\n\nAdditional Data Created:\n\nCreated an additional CSV file to input all the schools in Year 2019 before merger"
   },
   {
     "objectID": "index.html#scope-of-work",
     "href": "index.html#scope-of-work",
-    "title": "GISProjectGroup7",
+    "title": "GIS Project Group7",
     "section": "Scope of work:",
-    "text": "Scope of work:\nThe scope of work are as follows:\nOur Github Link:"
+    "text": "Scope of work:\nThe scope of work are as follows:\n\nWe delegate the roles equally among the 3 of us such that 2 people will be in charge of the QGIS (Edlyn & Beatrice), 3 of us to do posters and report together, 1 person to handle the webpage (Shu Ying). We decided to have this allocation so that all of us can focus on different areas and we can complete the work productively. Even so, all of us are still involved in all of the segments as we meet regularly to complete the project as a team.\nAllocation of work:\n\nSelection of project focus and conducting literature review. (Everyone)\nPreparing proposal and project website. (Shu Ying)\nData collection, extraction, integration, transformation and wrangling. (Edlyn & Beatrice)\nDesigning and building GIS model and database. (Edlyn & Beatrice)\nPerforming GIS analysis. (Shu Ying)\nProject webpage. (Shu Ying)\nPreparing poster and Project report (Everyone)\n\nFor every updates we have as a team, Shu Ying will make changes on this webpage, commit and push it at the end of the day\nOur team have also created a slack group and connected slack with Github so that all members are aware that for every pushes as we will receive updates"
   },
   {
     "objectID": "methodology.html",
     "href": "methodology.html",
     "title": "Methodology",
     "section": "",
-    "text": "this is the methodology"
+    "text": "The methodology used:\nWe would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2019 to future years in 2022-2024.\nBefore we proceed with the data collection stage, we read through articles to understand the mergers of the schools during these few years. All the articles that we have referred to are stated in the Overview page.\nFor the year of 2019, since we do not have the school Dataset for Year 2019, we used the Dataset from Year 2021 from data.gov.sg (School Directory and Information) and input more schools to form a completed version of Dataset before we proceed get to proceed on with Geocoding. We have also checked through all the addresses and input Latlong so that all the schools can be found in the OSM without having the possibility to omit any schools during the data Geocoding process."
   },
   {
     "objectID": "overview.html",
     "href": "overview.html",
     "title": "Overview",
     "section": "",
-    "text": "In this project, we are given two themes and sub-themes. Detail description of this project is available on this page. Land cover classification is a commonly application area of digital image analysis."
+    "text": "In this project, we are given two themes and sub-themes. Detail description of this project is available on this page."
   },
   {
     "objectID": "overview.html#literature-review",
     "href": "overview.html#literature-review",
     "title": "Overview",
     "section": "Literature review",
-    "text": "Literature review\nIn this project, the following articles will be reviewed."
+    "text": "Literature review\nIn this project, the following articles will be reviewed.\n\nhttps://www.straitstimes.com/singapore/education/2019-school-mergers-7-things-to-know\nhttps://www.channelnewsasia.com/singapore/moe-schools-merging-new-town-tanglin-telok-kurau-201401\nhttps://www.straitstimes.com/singapore/education/school-mergers-2019-why-were-the-8-government-jcs-the-ones-selected-for-merger\nhttps://www.gov.sg/article/why-is-the-ministry-of-education-merging-some-schools\nhttps://guidesify.com/merger-of-jcs-singapore/"
   },
   {
     "objectID": "overview.html#motivation",
@@ -82,5 +82,19 @@
     "title": "Overview",
     "section": "Tasks",
     "text": "Tasks\nThe project tasks are as follows:"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Project Schedule",
+    "section": "",
+    "text": "Gannt Chart\n\nProject schedule including a Gannt chart"
+  },
+  {
+    "objectID": "index.html#project-links",
+    "href": "index.html#project-links",
+    "title": "GIS Project Group7",
+    "section": "Project Links:",
+    "text": "Project Links:\nOur Github Link: https://github.com/ShuYing0506/GISProject"
   }
 ]
