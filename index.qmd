@@ -14,7 +14,7 @@ The data used are as follows:
 
 Additional Data Created:
 
--   Created an additional CSV file to input all the schools for Year 2019
+-   Created an additional CSV file to input all the schools merged in Year 2019
 
 ## Scope of work:
 
@@ -44,8 +44,10 @@ The scope of work are as follows:
 
 -   Our team have also created a slack group and connected slack with Github so that all members are aware that for every pushes as we will receive updates
 
+    ![](images/paste-D0E13E3C.png){width="360"}
+
 ## Project Links:
 
-Github Link: https://github.com/ShuYing0506/GISProject
+Github Link: <https://github.com/ShuYing0506/GISProject>
 
-Slack workspace: https://smt201group7.slack.com
+Slack workspace: <https://smt201group7.slack.com>
