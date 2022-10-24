@@ -1,19 +1,20 @@
 ---
-title: "GIS Project Group7"
+title: "GIS Project Group 7"
 ---
 
-Welcome to our GIS Project web site. Our group is working on Theme 2:
-Geography of Accessibility with GIS-based Network Analysis and on specific sub-theme 1: Impact of closures or mergers of education institutions on equity of access.
+Welcome to our GIS Project web site. Our group is working on Theme 2: Geography of Accessibility with GIS-based Network Analysis and on specific sub-theme 1: Impact of closures or mergers of education institutions on equity of access.
+
+Our main scope of the project will be make comparison of the past mergers in Year 2019 (20 schools affected) and future mergers from 2020 to 2025 (18 schools affected). We have decided to make a comparison before and after Covid-19 outbreak (Year 2020, Year 2021) in addition to finding out the how impact closures are on education institutions. We believe that it can bring more meaningful insights as compared to targeting a broad scope of mergers of education institutions for analysis.
 
 ## Data Used:
 
 The data used are as follows:
 
--   Data.gov (School Directory and Information 24 March Year 2021)
+-   Data.gov (School Directory and Information, last updated on: 24 March Year 2021)
 
 Additional Data Created:
 
--   Created an additional CSV file to input all the schools in Year 2019 before merger
+-   Created an additional CSV file to input all the schools for Year 2019
 
 ## Scope of work:
 
@@ -35,7 +36,9 @@ The scope of work are as follows:
 
     -   Project webpage. (Shu Ying)
 
-    -   Preparing poster and Project report (Everyone)
+    -   Preparing poster (Beatrice)
+
+    -   Project report (Everyone)
 
 -   For every updates we have as a team, Shu Ying will make changes on this webpage, commit and push it at the end of the day
 
@@ -43,4 +46,6 @@ The scope of work are as follows:
 
 ## Project Links:
 
-Our Github Link: https://github.com/ShuYing0506/GISProject
+Github Link: https://github.com/ShuYing0506/GISProject
+
+Slack workspace: https://smt201group7.slack.com
