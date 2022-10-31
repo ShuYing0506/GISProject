@@ -3,18 +3,36 @@ title: "Methodology"
 editor: visual
 ---
 
--   a detail documentation of the methods used.
-
 ***The methodology used:***
 
-We would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2019 to future years from 2020 to 2025.
+We would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2018 to future years from 2019 to 2025.
 
 Before we proceed with the data collection stage, we read through articles to understand the mergers of the schools during these few years. All the articles that we have referred to are stated in the [Overview](http://localhost:7684/overview.html) page.
 
-For the year of 2019, as we do not have the education institutions dataset for Year 2019, we used the dataset of Year 2021 from data.gov.sg (School Directory and Information) and input the list of schools that have been merged in 2019 (eg. "Jurong JC", "Pioneer JC") to form a completed version of dataset and delete the merged school name (eg. "Jurong Pioneer JC") before we proceed on with Geocoding. We have also created a list of excel displaying schools that have been merged in 2019 for comparison with schools that have merged and before merge. For the future mergers (Year 2020 to Year 2025), we stick to using one dataset that is the Year 2021 (School Directory and Information) from data.gov.sg and as we noticed that there are no mergers taking place in Year 2020 and Year 2021. This has also given us the idea to do a comparison of before and after Covid mergers of education institutions.
+*CSV Files required:*
 
--   We decided to ignore schools that have been closed down after year 2019 for the 2019 finalised dataset. We will assume that there are no other factors affecting the number of schools other than mergers.
+-   Year 2018 (compilation of schools that haven't merge)
+
+-   Year 2019 merged schools
+
+-   Year 2019 all schools including merged schools
+
+-   Year 2021, 2022, 2023, 2024, 2025
+
+***Year 2018 (Before merger)***
+
+As we do not have the education institutions dataset for Year 2018, we used the dataset of Year 2021 from data.gov.sg (School Directory and Information) and input the list of schools that have been merged in 2019 (eg. "Jurong JC", "Pioneer JC") to form a completed version of dataset and delete the merged school name (eg. "Jurong Pioneer JC") before we proceed on with Geocoding.
+
+***Year 2019 All Schools (After merger)***
+
+We have also created a list of excel displaying schools that have been merged in 2019 for comparison with schools that have merged and before merge. We will delete the name of the schools that has been closed down due to merging.
+
+***Year 2022, 2023, 2024, 2025***
+
+For the future mergers (Year 2020 to Year 2025), we stick to using one dataset that is the Year 2021 (School Directory and Information) from data.gov.sg and we noticed that there are no mergers taking place in Year 2020 and Year 2021. For years that have new mergers, we will add in schools names to give a complete set of data in each excel sheet.
+
+-   We decided to ignore schools that have been closed down. We will assume that there are no other factors affecting the number of schools other than mergers.
 
 -   We also assumed that schools that exist in 2021 dataset already existed in 2019
 
-We have also checked through all the addresses and input correct Latlong details information inside the CSV file so that all the schools can be found in the OSM without having the possibility to omit any schools during the Geocoding process.
+We have also checked through all the addresses and input correct Latlong details information inside the CSV file so that all the schools can be found in the OSM without having the possibility that schools are omitted during the Geocoding process.

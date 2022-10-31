@@ -16,37 +16,37 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "GIS Project Group 7",
+    "title": "GIS Project Group7",
     "section": "",
-    "text": "Welcome to our GIS Project web site. Our group is working on Theme 2: Geography of Accessibility with GIS-based Network Analysis and on specific sub-theme 1: Impact of closures or mergers of education institutions on equity of access.\nOur main scope of the project will be make comparison of the past mergers in Year 2019 (20 schools affected) and future mergers from 2020 to 2025 (18 schools affected). We have decided to make a comparison before and after Covid-19 outbreak (Year 2020, Year 2021) in addition to finding out the how impact closures are on education institutions. We believe that it can bring more meaningful insights as compared to targeting a broad scope of mergers of education institutions for analysis."
+    "text": "Welcome to our GIS Project web site. Our group is working on Theme 2: Geography of Accessibility with GIS-based Network Analysis and on specific sub-theme 1: Impact of closures or mergers of education institutions on equity of access."
   },
   {
     "objectID": "index.html#data-used",
     "href": "index.html#data-used",
-    "title": "GIS Project Group 7",
+    "title": "GIS Project Group7",
     "section": "Data Used:",
-    "text": "Data Used:\nThe data used are as follows:\n\nData.gov (School Directory and Information, last updated on: 24 March Year 2021)\n\nAdditional Data Created:\n\nCreated an additional CSV file to input all the schools merged in Year 2019"
+    "text": "Data Used:\nThe data used are as follows:\n\nData.gov (School Directory and Information 24 March Year 2021)\n\nAdditional Data Created:\n\nCreated an additional CSV file to input all the schools in Year 2018 before merger"
   },
   {
     "objectID": "index.html#scope-of-work",
     "href": "index.html#scope-of-work",
-    "title": "GIS Project Group 7",
+    "title": "GIS Project Group7",
     "section": "Scope of work:",
-    "text": "Scope of work:\nThe scope of work are as follows:\n\nWe delegate the roles equally among the 3 of us such that 2 people will be in charge of the QGIS (Edlyn & Beatrice), 3 of us to do posters and report together, 1 person to handle the webpage (Shu Ying). We decided to have this allocation so that all of us can focus on different areas and we can complete the work productively. Even so, all of us are still involved in all of the segments as we meet regularly to complete the project as a team.\nAllocation of work:\n\nSelection of project focus and conducting literature review. (Everyone)\nPreparing proposal and project website. (Shu Ying)\nData collection, extraction, integration, transformation and wrangling. (Edlyn & Beatrice)\nDesigning and building GIS model and database. (Edlyn & Beatrice)\nPerforming GIS analysis. (Shu Ying)\nProject webpage. (Shu Ying)\nPreparing poster (Beatrice)\nProject report (Everyone)\n\nFor every updates we have as a team, Shu Ying will make changes on this webpage, commit and push it at the end of the day\nOur team have also created a slack group and connected slack with Github so that all members are aware that for every pushes as we will receive updates"
+    "text": "Scope of work:\nThe scope of work are as follows:\n\nWe delegate the roles equally among the 3 of us such that 2 people will be in charge of the QGIS (Edlyn & Beatrice), 3 of us to do posters and report together, 1 person to handle the webpage (Shu Ying). We decided to have this allocation so that all of us can focus on different areas and we can complete the work productively. Even so, all of us are still involved in all of the segments as we meet regularly to complete the project as a team.\nAllocation of work:\n\nSelection of project focus and conducting literature review. (Everyone)\nPreparing proposal and project website. (Shu Ying)\nData collection, extraction, integration, transformation and wrangling. (Edlyn & Beatrice)\nDesigning and building GIS model and database. (Edlyn & Beatrice)\nPerforming GIS analysis. (Shu Ying)\nProject webpage. (Shu Ying)\nPreparing poster and Project report (Everyone)\n\nFor every updates we have as a team, Shu Ying will make changes on this webpage, commit and push it at the end of the day\nOur team have also created a slack group and connected slack with Github so that all members are aware that for every pushes as we will receive updates"
   },
   {
     "objectID": "index.html#project-links",
     "href": "index.html#project-links",
-    "title": "GIS Project Group 7",
+    "title": "GIS Project Group7",
     "section": "Project Links:",
-    "text": "Project Links:\nGithub Link: https://github.com/ShuYing0506/GISProject\nSlack workspace: https://smt201group7.slack.com"
+    "text": "Project Links:\nOur Github Link: https://github.com/ShuYing0506/GISProject"
   },
   {
     "objectID": "methodology.html",
     "href": "methodology.html",
     "title": "Methodology",
     "section": "",
-    "text": "The methodology used:\nWe would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2019 to future years from 2020 to 2025.\nBefore we proceed with the data collection stage, we read through articles to understand the mergers of the schools during these few years. All the articles that we have referred to are stated in the Overview page.\nFor the year of 2019, as we do not have the education institutions dataset for Year 2019, we used the dataset of Year 2021 from data.gov.sg (School Directory and Information) and input the list of schools that have been merged in 2019 (eg. “Jurong JC”, “Pioneer JC”) to form a completed version of dataset and delete the merged school name (eg. “Jurong Pioneer JC”) before we proceed on with Geocoding. We have also created a list of excel displaying schools that have been merged in 2019 for comparison with schools that have merged and before merge. For the future mergers (Year 2020 to Year 2025), we stick to using one dataset that is the Year 2021 (School Directory and Information) from data.gov.sg and as we noticed that there are no mergers taking place in Year 2020 and Year 2021. This has also given us the idea to do a comparison of before and after Covid mergers of education institutions.\n\nWe decided to ignore schools that have been closed down after year 2019 for the 2019 finalised dataset. We will assume that there are no other factors affecting the number of schools other than mergers.\nWe also assumed that schools that exist in 2021 dataset already existed in 2019\n\nWe have also checked through all the addresses and input correct Latlong details information inside the CSV file so that all the schools can be found in the OSM without having the possibility to omit any schools during the Geocoding process."
+    "text": "We would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2018 to future years from 2019 to 2025.\nBefore we proceed with the data collection stage, we read through articles to understand the mergers of the schools during these few years. All the articles that we have referred to are stated in the Overview page.\nCSV Files required:\n\nYear 2018 (compilation of schools that haven’t merge)\nYear 2019 merged schools\nYear 2019 all schools including merged schools\nYear 2021, 2022, 2023, 2024, 2025\n\nYear 2018 (Before merger)\nAs we do not have the education institutions dataset for Year 2018, we used the dataset of Year 2021 from data.gov.sg (School Directory and Information) and input the list of schools that have been merged in 2019 (eg. “Jurong JC”, “Pioneer JC”) to form a completed version of dataset and delete the merged school name (eg. “Jurong Pioneer JC”) before we proceed on with Geocoding.\nYear 2019 All Schools (After merger)\nWe have also created a list of excel displaying schools that have been merged in 2019 for comparison with schools that have merged and before merge. We will delete the name of the schools that has been closed down due to merging.\nYear 2022, 2023, 2024, 2025\nFor the future mergers (Year 2020 to Year 2025), we stick to using one dataset that is the Year 2021 (School Directory and Information) from data.gov.sg and we noticed that there are no mergers taking place in Year 2020 and Year 2021. For years that have new mergers, we will add in schools names to give a complete set of data in each excel sheet.\n\nWe decided to ignore schools that have been closed down. We will assume that there are no other factors affecting the number of schools other than mergers.\nWe also assumed that schools that exist in 2021 dataset already existed in 2019\n\nWe have also checked through all the addresses and input correct Latlong details information inside the CSV file so that all the schools can be found in the OSM without having the possibility that schools are omitted during the Geocoding process."
   },
   {
     "objectID": "overview.html",
@@ -60,7 +60,7 @@
     "href": "overview.html#motivation",
     "title": "Overview",
     "section": "Motivation:",
-    "text": "Motivation:"
+    "text": "Motivation:\nThe impacts of the mergers of education institutions that affects the equity of access by people.\n\nShortest path (The distance that people have to travel to school)\nNetwork analysis on how the transportation changes from different education levels e.g. Primary School vs Secondary School (Analyse how accessible the education institutions are from neighbourhood buildings)"
   },
   {
     "objectID": "overview.html#objectives",

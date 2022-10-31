@@ -9,6 +9,12 @@ In this project, we are given two themes and sub-themes. Detail description of t
 
 ## Motivation:
 
+The impacts of the mergers of education institutions that affects the equity of access by people.
+
+-   Shortest path (The distance that people have to travel to school)
+
+-   Network analysis on how the transportation changes from different education levels e.g. Primary School vs Secondary School (Analyse how accessible the education institutions are from neighbourhood buildings)
+
 ## Objectives:
 
 The objective of this project are as follows:
