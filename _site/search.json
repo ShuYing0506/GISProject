@@ -46,7 +46,7 @@
     "href": "methodology.html",
     "title": "Methodology",
     "section": "",
-    "text": "We would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2018 to future years from 2019 to 2025.\nBefore we proceed with the data collection stage, we read through articles to understand the mergers of the schools during these few years. All the articles that we have referred to are stated in the Overview page.\nCSV Files required:\n\nYear 2018 (compilation of schools that haven’t merge)\nYear 2019 merged schools\nYear 2019 all schools including merged schools\nYear 2021, 2022, 2023, 2024, 2025\n\nYear 2018 (Before merger)\nAs we do not have the education institutions dataset for Year 2018, we used the dataset of Year 2021 from data.gov.sg (School Directory and Information) and input the list of schools that have been merged in 2019 (eg. “Jurong JC”, “Pioneer JC”) to form a completed version of dataset and delete the merged school name (eg. “Jurong Pioneer JC”) before we proceed on with Geocoding.\nYear 2019 All Schools (After merger)\nWe have also created a list of excel displaying schools that have been merged in 2019 for comparison with schools that have merged and before merge. We will delete the name of the schools that has been closed down due to merging.\nYear 2022, 2023, 2024, 2025\nFor the future mergers (Year 2020 to Year 2025), we stick to using one dataset that is the Year 2021 (School Directory and Information) from data.gov.sg and we noticed that there are no mergers taking place in Year 2020 and Year 2021. For years that have new mergers, we will add in schools names to give a complete set of data in each excel sheet.\n\nWe decided to ignore schools that have been closed down. We will assume that there are no other factors affecting the number of schools other than mergers.\nWe also assumed that schools that exist in 2021 dataset already existed in 2019\n\nWe have also checked through all the addresses and input correct Latlong details information inside the CSV file so that all the schools can be found in the OSM without having the possibility that schools are omitted during the Geocoding process."
+    "text": "We would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2018, 2019 and 2024.\nBefore we proceed with the data collection stage, we read through articles to understand the mergers of the schools during these few years. All the articles that we have referred to are stated in the Overview page.\nCSV Files required:\n\nYear 2018 (compilation of schools that haven’t merge)\nYear 2019 merged schools\nYear 2024 (schools to be merged in 2022, 2023, 2024)\n\nYear 2018 (Before merger)\nAs we do not have the education institutions dataset for Year 2018, we used the dataset of Year 2021 from data.gov.sg (School Directory and Information) and input the list of schools that have been merged in 2019 (eg. “Jurong JC”, “Pioneer JC”) to form a completed version of dataset and delete the merged school name (eg. “Jurong Pioneer JC”) before we proceed on with Geocoding.\nYear 2019 All Schools (After merger)\nWe have also created a list of excel displaying schools that have been merged in 2019 for comparison with schools that have merged and before merge. We will delete the name of the schools that has been closed down due to merging.\nYear 2024\nFor the future mergers (Year 2020 to Year 2024), we stick to using one dataset that is the Year 2021 (School Directory and Information) from data.gov.sg and we noticed that there are no mergers taking place in Year 2020 and Year 2021. For years that have new mergers, we will add in schools names to give a complete set of data in the combined excel sheet.\n\nWe decided to ignore schools that have been closed down. We will assume that there are no other factors affecting the number of schools other than mergers.\nWe also assumed that schools that exist in 2021 dataset already existed in 2019\n\nWe have also checked through all the addresses and input correct Latlong details information inside the CSV file so that all the schools can be found in the OSM without having the possibility that schools are omitted during the Geocoding process."
   },
   {
     "objectID": "overview.html",
@@ -67,7 +67,7 @@
     "href": "overview.html#objectives",
     "title": "Overview",
     "section": "Objectives:",
-    "text": "Objectives:\nThe objective of this project are as follows:\n\nobjective 1:\nobjective 2:"
+    "text": "Objectives:\nThe objective of this project are as follows:\n\nobjective 1: Find out the patterns of before merger (Year 2018), present merger (Year 2019) and future merger (Year 2024)\nobjective 2:"
   },
   {
     "objectID": "overview.html#tasks",
@@ -89,5 +89,12 @@
     "title": "Project Schedule",
     "section": "",
     "text": "Gannt Chart\n\nProject schedule including a Gannt chart"
+  },
+  {
+    "objectID": "overview.html#proposal-timeline",
+    "href": "overview.html#proposal-timeline",
+    "title": "Overview",
+    "section": "Proposal Timeline",
+    "text": "Proposal Timeline\nThe project timeline are as follows:"
   }
 ]

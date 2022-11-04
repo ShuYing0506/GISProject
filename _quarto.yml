@@ -13,6 +13,8 @@ website:
         text: Results & Analysis
       - href: findings.qmd
         text: Lesson Learnt
+      - href: poster.qmd
+        text: Poster
 
         
     right:

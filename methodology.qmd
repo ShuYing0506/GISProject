@@ -5,7 +5,7 @@ editor: visual
 
 ***The methodology used:***
 
-We would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2018 to future years from 2019 to 2025.
+We would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2018, 2019 and 2024.
 
 Before we proceed with the data collection stage, we read through articles to understand the mergers of the schools during these few years. All the articles that we have referred to are stated in the [Overview](http://localhost:7684/overview.html) page.
 
@@ -15,9 +15,7 @@ Before we proceed with the data collection stage, we read through articles to un
 
 -   Year 2019 merged schools
 
--   Year 2019 all schools including merged schools
-
--   Year 2021, 2022, 2023, 2024, 2025
+-   Year 2024 (schools to be merged in 2022, 2023, 2024)
 
 ***Year 2018 (Before merger)***
 
@@ -27,9 +25,9 @@ As we do not have the education institutions dataset for Year 2018, we used the 
 
 We have also created a list of excel displaying schools that have been merged in 2019 for comparison with schools that have merged and before merge. We will delete the name of the schools that has been closed down due to merging.
 
-***Year 2022, 2023, 2024, 2025***
+***Year 2024***
 
-For the future mergers (Year 2020 to Year 2025), we stick to using one dataset that is the Year 2021 (School Directory and Information) from data.gov.sg and we noticed that there are no mergers taking place in Year 2020 and Year 2021. For years that have new mergers, we will add in schools names to give a complete set of data in each excel sheet.
+For the future mergers (Year 2020 to Year 2024), we stick to using one dataset that is the Year 2021 (School Directory and Information) from data.gov.sg and we noticed that there are no mergers taking place in Year 2020 and Year 2021. For years that have new mergers, we will add in schools names to give a complete set of data in the combined excel sheet.
 
 -   We decided to ignore schools that have been closed down. We will assume that there are no other factors affecting the number of schools other than mergers.
 
