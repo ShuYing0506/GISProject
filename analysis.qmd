@@ -1,16 +1,37 @@
 ---
-title: "Results & Analysis"
+title: "Results & Analysis:"
 editor: visual
 ---
 
-## Results:
+## **Results:**
 
-The results used in this project are as follows:
+#### ***School Locations:***
 
--   Data 1:
+#### 
 
--   
+![](images/locations%20pri%20sch.png){fig-align="center" width="494"}
 
-## Analysis
+![](images/locations%20sec%20sch.png){fig-align="center" width="494"}
 
-The project tasks are as follows:
+![](images/locations%20post%20sec-01.png){fig-align="center" width="494"}
+
+####  ***Differences in Accessibilities:***    
+
+![](images/Difference%20in%20Accessibility%20Pri%20Sch%202018-2019-03.png){fig-align="center" width="494"}
+
+![](images/Difference%20in%20Accessibility%20Pri%20Sch%202019-2024.png){fig-align="center" width="494"}
+
+![](images/Difference%20in%20Accessibility%20Sec%20Sch%202018-2019.png){fig-align="center" width="494"}
+
+![](images/Difference%20in%20Accessibility%20Sec%20Sch%202019-2024.png){fig-align="center" width="494"}
+
+![](images/Difference%20in%20Accessibility%20Post%20Sec%20Sch%202018-2019.png){fig-align="center" width="494"}
+
+## **Analysis:**
+
+## **Impacts on School Mergers:**
+
+We know that 9 pairs of  schools merging from 2022 to 2024 will cause the accessibility level to decrease drastically and the reasons behind it are caused by falling birth rates and changing demographics in our housing estates. This would also mean that the transportation methods for students to travel to school might change with mergers taking place. It is also said by the government (gov.sg)  that merging could be beneficial for students as Schools with low enrolment find it challenging to offer a wide range of subject combinations, educational programmes and co-curricular activities (CCAs). The mergers will provide schools with the healthy enrolment needed to continue to provide a rich variety of learning programmes and experiences for our students.
+
+\
+

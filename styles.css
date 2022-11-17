@@ -1,3 +1,24 @@
 /* css styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Amiri');
+@import url('https://fonts.googleapis.com/css2?family=Bitter');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono');
 
+create_theme(name = "theme") 
+
+html {
+  ...
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:    "Amiri", serif;
+  --mono-font:       "DM Mono", monospace;
+  --body-font:       "Bitter", sans-serif;
+  --navbar-font:     "Amiri", serif;
+}
+
+.distill-site-header {
+  --title-size:       18px;    
+  --text-color:       #ff414b; /* edited */
+  --text-size:        15px;
+  --hover-color:      #dd424c; /* edited */
+  --bkgd-color:       #ffd8db; /* edited */
+}

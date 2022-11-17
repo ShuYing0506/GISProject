@@ -1,11 +1,11 @@
 ---
-title: "Overview"
+title: ""
 editor: visual
 ---
 
-## Introduction
+# **Overview**
 
-In this project, we are given two themes and sub-themes. Detail description of this project is available on this [page](https://smt201-ay2022-23t1.netlify.app/gisproject).
+In this project, we are given two themes and sub-themes. Detailed description of this project is available on this [page](https://smt201-ay2022-23t1.netlify.app/gisproject).
 
 ## Motivation:
 
@@ -19,26 +19,30 @@ The impacts of the mergers of education institutions that affects the equity of 
 
 The objective of this project are as follows:
 
--   objective 1: Find out the patterns of before merger (Year 2018), present merger (Year 2019) and future merger (Year 2024)
+-   Objective 1: Find out the patterns of schools before merger (Year 2018), present merger (Year 2019) and future merger (Year 2024)
 
--   objective 2:
+-   Objective 2: Accessibilities of schools in different educational levels before (Year 2018-2019) and after merger (Year 2019-2024)
 
-## Proposal Timeline
+## Proposal Timeline (Gannt Chart)
 
 The project timeline are as follows:
 
-## Literature review
+For clearer view: [Gannt Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vQfp8nQq9sOdxo7don6llHvtJsFcPcDSNXDOhVZDazuZKyIKOQxxMHiWK6QAAm8Bg/pubhtml)
 
-In this project, the following articles will be reviewed.
+## ![](images/paste-817CD548.png)
 
--   https://www.straitstimes.com/singapore/education/2019-school-mergers-7-things-to-know
+## Literature Review
 
--   https://www.channelnewsasia.com/singapore/moe-schools-merging-new-town-tanglin-telok-kurau-201401
+In this project, the following articles are reviewed to help us in understanding the mergers.
 
--   https://www.straitstimes.com/singapore/education/school-mergers-2019-why-were-the-8-government-jcs-the-ones-selected-for-merger
+-   <https://www.straitstimes.com/singapore/education/2019-school-mergers-7-things-to-know>
 
--   https://www.gov.sg/article/why-is-the-ministry-of-education-merging-some-schools
+-   <https://www.channelnewsasia.com/singapore/moe-schools-merging-new-town-tanglin-telok-kurau-201401>
 
--   https://guidesify.com/merger-of-jcs-singapore/
+-   <https://www.straitstimes.com/singapore/education/school-mergers-2019-why-were-the-8-government-jcs-the-ones-selected-for-merger>
+
+-   <https://www.gov.sg/article/why-is-the-ministry-of-education-merging-some-schools>
+
+-   <https://guidesify.com/merger-of-jcs-singapore/>
 
 ## 

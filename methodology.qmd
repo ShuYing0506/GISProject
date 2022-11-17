@@ -1,9 +1,11 @@
 ---
-title: "Methodology"
+title: ""
 editor: visual
 ---
 
-***The methodology used:***
+# **Methodology**
+
+## ***The methodology used:***
 
 We would like to show the changes in the mergers of the schools (Primary School, Secondary School, JCs) overtime from 2018, 2019 and 2024.
 

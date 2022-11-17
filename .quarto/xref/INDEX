@@ -19,5 +19,11 @@
   },
   "schedule.qmd": {
     "schedule.html": "dabd7d39"
+  },
+  "poster.qmd": {
+    "poster.html": "90bc7909"
+  },
+  "webmaps.qmd": {
+    "webmaps.html": "94115acb"
   }
 }

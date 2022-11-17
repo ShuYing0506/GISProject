@@ -1,4 +1,8 @@
 ---
-title: "Poster"
+title: ""
 editor: visual
 ---
+
+# **Poster:**
+
+![](images/Poster_2.jpg)

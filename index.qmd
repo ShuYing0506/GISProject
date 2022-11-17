@@ -1,5 +1,5 @@
 ---
-title: "GIS Project Group7"
+title: "G2 TEAM7"
 ---
 
 Welcome to our GIS Project web site. Our group is working on Theme 2: Geography of Accessibility with GIS-based Network Analysis and on specific sub-theme 1: Impact of closures or mergers of education institutions on equity of access.
