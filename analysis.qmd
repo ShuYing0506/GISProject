@@ -15,17 +15,131 @@ editor: visual
 
 ![](images/locations%20post%20sec-01.png){fig-align="center" width="494"}
 
-####  ***Differences in Accessibilities:***    
+####  ***Changes in Accessibilities Over Time:***    
 
-![](images/Difference%20in%20Accessibility%20Pri%20Sch%202018-2019-03.png){fig-align="center" width="494"}
+![](images/2018%20pri%20sch%20Accessibility.png){fig-align="center" width="494" height="350"}
+
+![](images/2019%20pri%20sch%20Accessibility-03.png){fig-align="center" width="494"}
+
+![](images/2024%20pri%20sch%20Accessibility.png){fig-align="center" width="494"}
+
+The maps created show the distribution of access in Singapore to primary schools. Overall, it appears that the shortest distance to a primary school increases towards the edges of Singapore, but is also high in the middle of the map, where various catchment areas and nature reserves reside. This owes to the fact that roads are not present or readily available in these areas and can reduce its accessibility to a school. 
+
+It should also be noted that some hexagons have a shortest distance value of over, which is likely due to errors such as orphaned roads and the nearest road that travels one way only to a dead end. These arose in the data preparation stage, since only paths deemed \'walkable\' were used. They could carry forward in subsequent maps and should be disregarded.
+
+![](images/pri.png){width="400"}
+
+The differences between the maps over time are not obvious in these maps as the changes were not drastic. Some areas may experience an increase in shortest distance to a school but the change may not be big enough to warrant a shift in class. Hence, we created maps to showcase the differences between 2 different time periods.
 
 ![](images/Difference%20in%20Accessibility%20Pri%20Sch%202019-2024.png){fig-align="center" width="494"}
 
 ![](images/Difference%20in%20Accessibility%20Sec%20Sch%202018-2019.png){fig-align="center" width="494"}
 
+From these maps, it is clear that for the most part of Singapore, there was not much change in shortest distance to a school and increases in distance are concentrated in areas where a school closed down due to a merger. 
+
+\
+For the difference in accessibility between 2018 and 2019, there appears to be no particular pattern in change of shortest distance to a school when comparing the map to locations of primary school mergers in 2019 (Figure 1). Random changes in the shortest distances to a school could be due to errors in data collection or preparation.
+
+![](images/paste-B8FBDFB6.png){width="400"}
+
+*Figure 2: Difference in Accessibility of Primary Schools between 2018 and 2019, with locations of schools that closed due to 2019 mergers*\
+\
+Between 2019 and 2024, there appears to be specific areas affected by the school closures. When compared to the locations of schools that will be closing due to future mergers (yellow icons), the clusters appear to correlate (Figure 2).
+
+![](images/paste-7C2B3778.png){width="420"}
+
+*Figure 3: Difference in Accessibility of Primary Schools between 2019 and 2024, with locations of schools that will close due to future mergers*
+
+From figure 3, it can also be seen that the closure of Stamford Primary School will have a disproportionately higher impact on the area surrounding it as compared to the other schools. This could be because there are no other schools located in that area so people staying in that area would have to travel further to reach a school. 
+
+\
+![](images/paste-A669D2B0.png){width="400"}
+
+Figure 4: Zoom in to Primary School Locations
+
+When analysed alongside the residential buildings (blue polygons) in the area surrounding the school, it can be observed that the impact of the closure of Stamford Primary School is not as great as the accessibility map implies.
+
+![](images/paste-C55CB28E.png){width="334"}
+
+*Figure 5: Comparison between Stamford and Eunos Primary School*
+
+Residential buildings located in the area affected by the closure of Stamford Primary School are sparse and far less in number as compared to that in the area affected by the closure of Eunos Primary School. Hence, it is pertinent to analyse our accessibility maps alongside the locations of residential buildings to get a clearer picture of the impact of school closures on the area.
+
+## *** Secondary School***
+
+![](images/2018%20sec%20sch%20Accessibility.png){fig-align="center" width="494"}
+
+![](images/2019%20sec%20sch%20Accessibility.png){fig-align="center" width="494"}
+
+![](images/2024%20sec%20sch%20Accessibility.png){fig-align="center" width="494"}
+
+The maps created show the distribution of access in Singapore to secondary schools. Similar to the primary schools, overall, it appears that the shortest distance to a secondary school increases towards the edges of Singapore, but is also high in the middle of the map, where various catchment areas and nature reserves reside. 
+
+Errors in this dataset are less prevalent, as can be seen in the legend going up to only 7818 metres. This is because all road networks were used, with the exception of bridleways, so it is unlikely for orphaned roads and dead ends to occur. It should also be noted that the road networks included railways to better represent the transport network students use to get to school (Mass Rapid Transport).
+
+The differences between the maps over time are not obvious in these maps as the changes were not drastic. Some areas may experience an increase in shortest distance to a school but the change may not be big enough to warrant a shift in class. Hence, we created maps to showcase the differences between 2 different time periods.
+
+![](images/Difference%20in%20Accessibility%20Sec%20Sch%202018-2019-01.png){fig-align="center" width="494"}
+
 ![](images/Difference%20in%20Accessibility%20Sec%20Sch%202019-2024.png){fig-align="center" width="494"}
 
+From these maps, it is clear that for the most part of Singapore, there was not much change in shortest distance to a school and increases in distance are concentrated in areas where a school closed down due to a merger.
+
+![](images/paste-D7BA57E0.png)
+
+*Figure 6: Difference in Accessibility of Secondary Schools between 2018 and 2019, with locations of schools that closed due to 2019 mergers*
+
+\
+For the difference in accessibility between 2018 and 2019, it appears that the impact of the closures of the schools due to mergers is not that high on the area surrounding it. It ranges from 10 to 120 metres in the shortest distance to a school.  The close ups also imply that the closures of Hong Kah and Shuqun Secondary Schools have an impact on a wider area than that of East View Secondary School. 
+
+![](images/paste-99379FA4.png)\
+
+*Figure 7: Zoom in to Secondary School Locations*
+
+On further analysis with the schools currently surrounding the merged schools, it appears that the abundance of secondary schools surrounding East View Secondary School could have mitigated the impact of the merger with regards to the way we calculated it. For the merger of Shuqun Secondary School, the areas on its bottom right could have had a different school as its nearest school via the road network used and were thus \'not affected\' by the closure of Shuqun Secondary School. 
+
+\
+![](images/paste-CB039B40.png){width="400"}
+
+*Figure 8: Difference in Accessibility of Secondary Schools between 2019 and 2024, with locations of schools that will close due to future mergers*
+
+\
+At a glance, the areas around the schools to be closed will experience an increase in the shortest distance to a school. This could be because there are no other schools located in that area so people staying in that area would have to travel further to reach a school. From figure 8, it seems that the closure of Chua Chu Kang Secondary School will have an impact on the largest area around it as compared to the other schools, and hence have the greatest impact.
+
+![](images/paste-A906C904.png){width="400"}
+
+*Figure 9: Zoom in to Secondary School Locations*
+
+When analysed alongside the residential buildings (blue polygons) in the area surrounding the school, however, it can be observed that the impact of the closure of Chua Chu Kang Secondary School is not as great as the accessibility map implies. \
+
+![](images/paste-6DD4C9D3.png){width="400"}
+
+*Figure 10: Homes Located in the Area Affected by Closure of Chua Chu Kang Secondary School*
+
+The huge area affected by Chua Chu Kang on the left side of figure 10 contains only a few houses affected by the closure. 
+
+![](images/paste-B99EC714.png){width="400"}
+
+*Figure 11:  Homes Located in the Area Affected by Closure of  Various Secondary Schools*
+
+After analysing figure Y, though it seems to affect the smallest area, the closure of Ping Yi Secondary School is projected to affect the most number of residential buildings as there is a great number of them located within the area affected. 
+
+##  
+***Post-Secondary School***
+
+![](images/2018%20post%20sec%20sch%20Accessibility-01.png){fig-align="center" width="494"}
+
+![](images/2019%20post%20sec%20sch%20Accessibility.png){fig-align="center" width="494"}
+
+![](images/2018%20post%20sec%20sch%20Accessibility-01.png){fig-align="center" width="494"}
+
+The maps created show the distribution of access in Singapore to secondary schools. Similar to the primary schools, overall, it appears that the shortest distance to a secondary school increases towards the edges of Singapore, but is also high in the middle of the map, where various catchment areas and nature reserves reside. 
+
+Errors in this dataset are less prevalent, as can be seen in the legend going up to only 7818 metres. This is because all road networks were used, with the exception of bridleways, so it is unlikely for orphaned roads and dead ends to occur. It should also be noted that the road networks included railways to better represent the transport network students use to get to school (Mass Rapid Transport).
+
 ![](images/Difference%20in%20Accessibility%20Post%20Sec%20Sch%202018-2019.png){fig-align="center" width="494"}
+
+As there will not be any merger taking place for post-secondary schools after Year 2019, we will be focusing on the mergers that have taken place. Post-secondary schools are accessible in areas located in the Central and the North region. Few dark red spots can be spotted in the north area while the rest of the red spots are seen at the right end of the map. This shows that it is harder to access schools that are in the east area and the cluster is located in Pasir Ris.
 
 ## **Analysis:**
 
