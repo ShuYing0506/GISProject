@@ -12,29 +12,26 @@ The data used are as follows:
 
 Additional Data Created:
 
--   Created an additional CSV file to input all the schools in Year 2018 before merger
+-   Created additional CSV files to input all mergers of different years, merged schools in Year 2019 and future merges Year 2022 - Year 2024
 
 ## Scope of work:
 
 The scope of work are as follows:
 
--   We delegate the roles equally among the 3 of us such that 2 people will be in charge of the QGIS (Edlyn & Beatrice), 3 of us to do posters and report together, 1 person to handle the webpage (Shu Ying). We decided to have this allocation so that all of us can focus on different areas and we can complete the work productively. Even so, all of us are still involved in all of the segments as we meet regularly to complete the project as a team.
+## Delegation of work:
 
--   **Allocation of work:**
+We delegate the roles equally among the 3 of us such that 2 people will be in charge of the QGIS (Edlyn & Beatrice), 3 of us to do posters and report together, 1 person to handle the webpage (Shu Ying). We decided to have this allocation so that all of us can focus on different areas and we can complete the work productively. Even so, all of us are still involved in all of the segments as we meet regularly to complete the project as a team.
 
-    -   Selection of project focus and conducting literature review. (Everyone)
-
-    -   Preparing proposal and project website. (Shu Ying)
-
-    -   Data collection, extraction, integration, transformation and wrangling. (Edlyn & Beatrice)
-
-    -   Designing and building GIS model and database. (Edlyn & Beatrice)
-
-    -   Performing GIS analysis. (Shu Ying)
-
-    -   Project webpage. (Shu Ying)
-
-    -   Preparing poster and Project report (Everyone)
+| Job Scope                                                              | Person-In-Charge |
+|------------------------------------------------------------------------|------------------|
+| Selection of project focus and conducting literature review            | Team             |
+| Performing GIS analysis                                                | Team             |
+|  Project Report                                                        | Team             |
+| Data collection, extraction, integration, transformation and wrangling | Edlyn & Beatrice |
+| Designing and building GIS model and database                          | Edlyn & Beatrice |
+| Preparing Poster                                                       | Beatrice         |
+| Project Minutes                                                        | Shu Ying         |
+| Project Website                                                        | Shu Ying         |
 
 -   For every updates we have as a team, Shu Ying will make changes on this webpage, commit and push it at the end of the day
 
@@ -42,4 +39,8 @@ The scope of work are as follows:
 
 ## Project Links:
 
-Our Github Link: https://github.com/ShuYing0506/GISProject
+Our Github Link: <https://github.com/ShuYing0506/GISProject>
+
+Setting up Netlify: <https://app.netlify.com/sites/smtgroup7/settings/domain>
+
+Slack workspace: <https://smt201group7.slack.com>

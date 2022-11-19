@@ -1,4 +1,6 @@
 ---
-title: "What we have learnt in this Project"
+title: ""
 editor: visual
 ---
+
+## **Takeaways from this Project**

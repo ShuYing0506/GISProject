@@ -22,8 +22,7 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: schedule.qmd
-        text: Project Schedule
+
 
 format:
   html:

@@ -1,9 +1,9 @@
 ---
-title: "Results & Analysis:"
+title: ""
 editor: visual
 ---
 
-## **Results:**
+## **Results & Analysis:**
 
 #### ***School Locations:***
 
@@ -15,7 +15,17 @@ editor: visual
 
 ![](images/locations%20post%20sec-01.png){fig-align="center" width="494"}
 
-####  ***Changes in Accessibilities Over Time:***    
+The locations of the schools currently existing are represented by green icons, schools that have merged in 2019 are represented by red icons and the schools that are merging in the future years are represented by yellow icons. 
+
+For Post-Secondary Schools, there have not been any announced future mergers as of November 2021, hence our data and analysis include only mergers that occurred in 2019 and currently existing institutions. 
+
+These locations have been provided as separate from the accessibility maps to be discussed later to avoid confusion and allow greater clarity on them. \
+
+# **Changes in Accessibilities Over Time:**
+
+The accessibility maps were created using hexagon grids as they can tessellate to cover an entire area with an evenly spaced grid and have a low sampling bias due to its low perimeter-to-area ratio. The mode used for classification is Natural Breaks (Jenks) as it finds natural groupings of the data, and units for the legends is metres.
+
+## ***Primary School***
 
 ![](images/2018%20pri%20sch%20Accessibility.png){fig-align="center" width="494" height="350"}
 
@@ -65,7 +75,7 @@ When analysed alongside the residential buildings (blue polygons) in the area su
 
 Residential buildings located in the area affected by the closure of Stamford Primary School are sparse and far less in number as compared to that in the area affected by the closure of Eunos Primary School. Hence, it is pertinent to analyse our accessibility maps alongside the locations of residential buildings to get a clearer picture of the impact of school closures on the area.
 
-## *** Secondary School***
+## ***Secondary School***
 
 ![](images/2018%20sec%20sch%20Accessibility.png){fig-align="center" width="494"}
 
@@ -124,8 +134,7 @@ The huge area affected by Chua Chu Kang on the left side of figure 10 contains o
 
 After analysing figure Y, though it seems to affect the smallest area, the closure of Ping Yi Secondary School is projected to affect the most number of residential buildings as there is a great number of them located within the area affected. 
 
-##  
-***Post-Secondary School***
+## ***Post-Secondary School***
 
 ![](images/2018%20post%20sec%20sch%20Accessibility-01.png){fig-align="center" width="494"}
 
@@ -141,11 +150,58 @@ Errors in this dataset are less prevalent, as can be seen in the legend going up
 
 As there will not be any merger taking place for post-secondary schools after Year 2019, we will be focusing on the mergers that have taken place. Post-secondary schools are accessible in areas located in the Central and the North region. Few dark red spots can be spotted in the north area while the rest of the red spots are seen at the right end of the map. This shows that it is harder to access schools that are in the east area and the cluster is located in Pasir Ris.
 
-## **Analysis:**
+![](images/paste-4B79E51F.png){width="400"}
+
+*Figure 12: Difference in Accessibility of Post-Secondary Schools between 2018 and 2019, with locations of schools that closed due to 2019 mergers*
+
+As before, we should look into reasons for the varying differences caused by the closures of these schools. The closure of Tampines Junior College seems to affect the largest area as seen from figure 12, while the closure of Innova Junior College appears to have had no effect on the area around it.
+
+![](images/paste-CF2CF510.png){width="400"}
+
+*Figure 13: All Post-Secondary School Locations*
+
+From figure 13, we can infer that it is because Tampines JC is the school located on the easternmost part of Singapore, so it is the nearest school for a large portion of Eastern Singapore. Very near Innova JC is Singapore Sports School which could explain why our map identifies no change in accessibility for the area surrounding Innova JC. 
+
+To find out if the closure of Tampines Junior College indeed has the highest impact on Singapore, we should analyse it alongside the locations of residential buildings (blue polygons).
+
+![](images/paste-89E9BE2A.png){width="400"}
+
+*Figure 14: Homes Located in the Area Affected by Closure of Tampines Junior College*
+
+While its closure definitely affects a good number of homes nearest to it, it is not as large as the area we had seen to be affected. Majority of the area indicated to be affected by the closure does not contain any residential buildings.
+
+![](images/paste-464429D7.png){width="400"}
+
+*Fi*gure 15: Homes Located in the Area Affected by Closure of V arious Post-Secondary Schools
+
+After analysing figure 15, it appears that the closure of Tampines Junior College still affects the most number of homes as it has the most residential buildings located in the area affected by its closure. The area is also the most heavily impacted, as the distance to the next nearest Post-Secondary School increased the most as well.
 
 ## **Impacts on School Mergers:**
 
 We know that 9 pairs of  schools merging from 2022 to 2024 will cause the accessibility level to decrease drastically and the reasons behind it are caused by falling birth rates and changing demographics in our housing estates. This would also mean that the transportation methods for students to travel to school might change with mergers taking place. It is also said by the government (gov.sg)  that merging could be beneficial for students as Schools with low enrolment find it challenging to offer a wide range of subject combinations, educational programmes and co-curricular activities (CCAs). The mergers will provide schools with the healthy enrolment needed to continue to provide a rich variety of learning programmes and experiences for our students.
 
+# **Transport Analysis:**
+
+When choosing schools to merge, according to MOE, the site for the merged school is chosen based on quality of infrastructure and accessibility to transport ([Sin, 2017](https://www.straitstimes.com/singapore/education/school-mergers-2019-why-were-the-8-government-jcs-the-ones-selected-for-merger)). To test this, we will analyse the selection of the site of Anderson Junior College over the site of Serangoon Junior College in their mergers to form Anderson Serangoon Junior College.
+
+![](images/paste-1BC2654E.png){width="400"}\
+
+![](images/paste-FBAC3E31.png){width="400"}
+
+From the print layouts, we can see how many bus stops and MRT Stations are located within walking distance of the junior colleges. Walking distance has been represented with 1 km buffer zones, 1 km Iso-Area Polygons and 10 minutes Iso-Area Polygons. 
+
+For the site of Anderson JC, there are 16 bus stops and 1 MRT station -- Yio Chu Kang MRT within the smallest catchment area, the 10 minutes Iso-Area Polygons. For Serangoon JC, only 10 bus stops are within the same catchment area type, and two MRT stations -- Hougang MRT and Kovan MRT barely touch the borders of the 1 km Iso-Area Polygon. Hence, it is clear that the site of Anderson Junior College should be the site of the merged school Anderson Serangoon Junior College when considering the aspect of access to transport. 
+
 \
 
+## **Limitations:**
+
+Some of the limitations that our groups faced are: 
+
+-   we did not take into account changes in infrastructure/transport over time, some road networks/mrt stations could be non-existent in 2018. Similarly, more roads/mrt stations could increase accessibility in 2024 that we did not account for
+
+-   In actuality, the accessibility of schools cannot be measured using just the shortest distance to a school, but should take into account accessibility to schools of different academic calibres, school fees if applicable and types (art school, sport school)  
+
+-   We eliminate the fact that there are possibility of schools that have closed down
+
+-   We also assumed that schools that exist in the 2024 dataset already existed in 2019
