@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EX-SCHOOLS ME! -</title>
+<title>G2 Team 7: Ex-Schools Me! -</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">EX-SCHOOLS ME!</span>
+    <span class="navbar-title">G2 Team 7: Ex-Schools Me!</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -120,6 +120,18 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#methodology" id="toc-methodology" class="nav-link active" data-scroll-target="#methodology"><strong>Methodology</strong></a>
   <ul class="collapse">
   <li><a href="#the-methodology-used" id="toc-the-methodology-used" class="nav-link" data-scroll-target="#the-methodology-used"><strong><em>The methodology used:</em></strong></a></li>
+  <li><a href="#data-extraction" id="toc-data-extraction" class="nav-link" data-scroll-target="#data-extraction"><u><strong>Data Extraction</strong></u></a>
+  <ul class="collapse">
+  <li><a href="#extracting-the-sg-boundary" id="toc-extracting-the-sg-boundary" class="nav-link" data-scroll-target="#extracting-the-sg-boundary">Extracting the SG boundary</a></li>
+  <li><a href="#extracting-all-schools-from-the-2019-merger-onwards" id="toc-extracting-all-schools-from-the-2019-merger-onwards" class="nav-link" data-scroll-target="#extracting-all-schools-from-the-2019-merger-onwards">Extracting all schools from the 2019 merger onwards</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation"><u><strong>Data Preparation</strong></u></a></li>
+  </ul></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a>
+  <ul class="collapse">
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  </ul></li>
+  <li><a href="#preparing-maps-for-analysis" id="toc-preparing-maps-for-analysis" class="nav-link" data-scroll-target="#preparing-maps-for-analysis"><u><strong>Preparing Maps for Analysis</strong></u></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -144,16 +156,659 @@ ul.task-list li input[type="checkbox"] {
 <p><strong><em>Year 2018 (Before merger)</em></strong></p>
 <p>As we do not have the education institutions dataset for Year 2018, we used the dataset of Year 2021 from data.gov.sg (School Directory and Information) and input the list of schools that have been merged in 2019 (eg. “Jurong JC”, “Pioneer JC”) to form a completed version of dataset and delete the merged school name (eg. “Jurong Pioneer JC”) before we proceed on with Geocoding.</p>
 <p><strong><em>Year 2019 All Schools (After merger)</em></strong></p>
-<p>We have also created a list of excel displaying schools that have been merged in 2019 for comparison with schools that have merged and before merge. We will delete the name of the schools that has been closed down due to merging.</p>
+<p>We have also created a list of excel displaying schools that have been merged in 2019 for comparison with schools that have merged and before merged as well as future mergers.</p>
 <p><strong><em>Year 2024</em></strong></p>
-<p>For the future mergers (Year 2020 to Year 2024), we stick to using one dataset that is the Year 2021 (School Directory and Information) from data.gov.sg and we noticed that there are no mergers taking place in Year 2020 and Year 2021. For years that have new mergers, we will add in schools names to give a complete set of data in the combined excel sheet.</p>
+<p>For the future mergers (Year 2022 to Year 2024 excluding Year 2020 and Year 2021), we stick to using one dataset that is the Year 2021 (School Directory and Information) from data.gov.sg as we noticed that there are no mergers taking place in Year 2020 and Year 2021. For years that have new mergers, we will add in schools names to give a complete set of data in the combined excel sheeast.</p>
 <ul>
 <li><p>We decided to ignore schools that have been closed down. We will assume that there are no other factors affecting the number of schools other than mergers.</p></li>
 <li><p>We also assumed that schools that exist in 2021 dataset already existed in 2019</p></li>
 </ul>
 <p>We have also checked through all the addresses and input correct Latlong details information inside the CSV file so that all the schools can be found in the OSM without having the possibility that schools are omitted during the Geocoding process.</p>
+</section>
+<section id="data-extraction" class="level2">
+<h2 class="anchored" data-anchor-id="data-extraction"><u><strong>Data Extraction</strong></u></h2>
+<p>Firstly, we need to download the data needed and import them into QGIS.</p>
+<p>From data.gov.sg, download these files:</p>
+<ul>
+<li><p>Master Plan 2019 Subzone Boundary (No Sea)</p></li>
+<li><p>School Directory and Information</p></li>
+</ul>
+<p>From Geofabrik, download the latest OSM zip file.</p>
+<section id="extracting-the-sg-boundary" class="level3">
+<h3 class="anchored" data-anchor-id="extracting-the-sg-boundary">Extracting the SG boundary</h3>
+<p>Open a new project in QGIS and change the CRS of the project to EPSG 3414. Click on control+s and save the QGS file as 'project'.</p>
+<p>From the browse panel, double click on the MP19 subzone boundary to add it into QGIS. Your map should look like Figure 1.</p>
+<p><img src="images/paste-78649E04.png" class="img-fluid" width="402"></p>
+<p><em>Figure 1</em></p>
+<p>We will now remove the islands that are not needed and retain the main island map only. Click on the subzone layer to make it active, and click on the select features icon. Select the islands that we will not be using in this project, as seen in Figure 2.</p>
+<p><img src="images/paste-FAC2AFAA.png" class="img-fluid" width="400"></p>
+<p><em>Figure 2</em></p>
+<p>Click on the inverse selection button to select the main map instead. Your screen should look like Figure 3.</p>
+<p><img src="images/paste-6D413D9C.png" class="img-fluid" width="400"></p>
+<p><em>Figure 3</em></p>
+<p>Right click on this layer and export the selected features as a geopackage. Name the geopackage as 'project' and name this layer as 'mpsz'. Make sure to set the CRS as EPSG3414 and to tick the checkbox to 'save selected features only'.</p>
+<p>Remove the MP19 subzone layer from QGIS after the geopackage layer has been created.</p>
+</section>
+<section id="extracting-all-schools-from-the-2019-merger-onwards" class="level3">
+<h3 class="anchored" data-anchor-id="extracting-all-schools-from-the-2019-merger-onwards">Extracting all schools from the 2019 merger onwards</h3>
+<p>In the School Directory and Information zip file, open the csv file titled 'general-information-of-schools'.</p>
+<p>Add 2 new columns titled 'City' and 'Country', and fill in 'Singapore' for the entire column. Delete any unnecessary columns as well. You should be left with these columns only:</p>
+<p>School_name Address Postal_code Mainlevel_code City Country</p>
+<p>Your file should look like Figure 4.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-A0CC089E.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 4</figcaption><p></p>
+</figure>
+</div>
+<p>Save this as a new csv file, titled 'schools'</p>
+<p>In QGIS, from the menu bar, click on MMQGIS &gt; geocode &gt; geocode csv with web service</p>
+<p>When the geocode csv with web servicewindow appears, click on the 3 dots and select the schools csv. Select theaddress to be the 'address' column, city to be the 'city' column, and the country to be the 'country' column. Select 'OpenStreetMap/Nominatim' as the Web Service.</p>
+<p>For the output file name, click on the 3 dots and create a new folder in your file explorer. Name this folder 'geocoding'. Type the file name as 'geocoded_education1'.</p>
+<p>For the not found output list, click on the 3 dots and select the geocoding folder that you have previously created. Typethe file name as 'not_found_education1'</p>
+<p>Your panel should look like Figure 5. Click on apply and wait for it to run.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-E5211049.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 5</figcaption><p></p>
+</figure>
+</div>
+<p>After the process has finished running, a temporary layer should appear in the main screen. Rename this temporary layer to 'schools'. Your screen should look like Figure 6.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-FA282D56.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 6</figcaption><p></p>
+</figure>
+</div>
+<p>Open the non_found_education1 csv file. Using <a href="https://stevemorse.org/jcal/latlon.php" class="uri">https://stevemorse.org/jcal/latlon.php</a>, get the latitude and longitudes of the school locations by inputting the relevant information into the website.</p>
+<p>You should get a csv file similar to the one in Figure 7.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-6D6EF319.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 7</figcaption><p></p>
+</figure>
+</div>
+<p>To import the schools in the not_found_education1 dataset into QGIS,add the csv file as a delimited text layer. From the menu bar, click on Layers &gt; Add layers &gt; Add delimited text layer</p>
+<p>Select Longitude as the X field and Latitude as the Y field. Select EPSG4326 as the Geometry CRS as well. Your window should look similar to Figure 8. Click on add.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-99A0C962.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 8</figcaption><p></p>
+</figure>
+</div>
+<p>To merge all schools together into one layer, we first have to rename the columns, since the column names do not match for both layers. We can check this by opening the attribute table for both layers. This comparison can be seen in Figure 9.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-C5455BD8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 9</figcaption><p></p>
+</figure>
+</div>
+<p>From Figure 6, we have to change these column names from the geocoded_schools1 layer.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; School_nam to school_name</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Postal_cod to postal_code</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Session_co to session_code</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mainlevel_ to mainlevel_code</p>
+<p>From the menu bar, click on Geoprocessing &gt; Toolbox &gt; Rename fields.</p>
+<p>For the input layer, select geocoded_education1. Select school_nam as the 'Field to rename'. Input 'school_name' as the New field name. Check the open output file after running algorithm checkbox. Your window should look similar to Figure 10. Click on run.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-D7BB2B14.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 10</figcaption><p></p>
+</figure>
+</div>
+<p>A temporary layer called 'Renamed' should be added. Save this layer as a geopackage file and name it 'geocoded_schools1`. When prompted to, click on Overwrite layer.</p>
+<p>Repeat the process for the other columns that have to be renamed.</p>
+<p>To merge both layers, from the main panel, click on Vector &gt; Data management tools &gt; Merge vector layers. For the input layers, select 'not_found_education1' and 'geocoded_education1', as shown in Figure 11</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-48B9E3B3.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 11</figcaption><p></p>
+</figure>
+</div>
+<p>Click on ok, then run the process. A new temporary layer should be added into your QGIS. Right click on this layer to open the attribute table. Click on the pencil&nbsp;icon to organize the table columns. Uncheck the columns that are not necessary, as shown in Figure 12.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-43710406.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 12</figcaption><p></p>
+</figure>
+</div>
+<p>Save this merged layer as a geopackage, name it 'all schools 2021'. Make sure that the CRS is set to EPSG3414.</p>
+<p>Right click on the 'all schools 2021' layer and open the attribute table. Click on the select features by expression icon <img src="file:///C:/Users/User/AppData/Local/Temp/msohtmlclip1/01/clip_image002.gif" class="img-fluid">.&nbsp; Select the locations of schools that will be merged in 2022 (only select those whose locations will not be used after the merger). An example of the code that should be used is shown in Figure 13.</p>
+<p>The list of schools that will be merged in the following years can be found here. <a href="https://www.moe.gov.sg/-/media/files/news/press/2021/annex-school-mergers.ashx?la=en&amp;hash=F52BA582E438A9320B252F070762E621B059B854" class="uri">https://www.moe.gov.sg/-/media/files/news/press/2021/annex-school-mergers.ashx?la=en&amp;hash=F52BA582E438A9320B252F070762E621B059B854</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-F8196BAA.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 13</figcaption><p></p>
+</figure>
+</div>
+<p>Click on select features and close the pop up. The schools that have been selected should be shown in the attribute table as shown in Figure 14.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-4FBD249B.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 14</figcaption><p></p>
+</figure>
+</div>
+<p>Click on the inverse selection&nbsp;icon. All schools except the one that will be merged are selected instead, as shown in Figure 15.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-49F5A0BC.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 15</figcaption><p></p>
+</figure>
+</div>
+<p>Close the attribute table. Right click on the all schools 2021 layer and save selected features only as a geopackage. Make sure that the CRS is set to EPSG3414 and that the 'save selected features only' checkbox is ticked. Name this layer 'all schools 2022'.</p>
+<p>Using the same method, extract the schools that will remain after the mergers, in 2023 and 2024.</p>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<p>Extracting all schools from 2018</p>
+<p>As the data that we have extracted thus far is only applicable to 2021 and later, we will have to extract the schools before the 2019 merger as well.</p>
+<p>Using <a href="https://elite.com.sg/school-shift-2019" class="uri">https://elite.com.sg/school-shift-2019</a> and google search, manually make a csv file with the schools that have merged in 2019, as shown in Figure 16. The addresses and the postal codes of each school can be sourced online.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-41360340.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Figure 16</figcaption><p></p>
+</figure>
+</div>
+<p>Using similar methods as before, geocode this csv to import the dataset into QGIS. Save this layer as a geopackage, and name it 'geocoded sch'</p>
+<p>As there are schools that cannot be found using geocoding as well, find the latitude and longitude of these schools using the same website (<a href="https://stevemorse.org/jcal/latlon.php" class="uri">https://stevemorse.org/jcal/latlon.php</a>) and add it into the not found schools csv file, as shown in Figure 17.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-62481C3E.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 17</figcaption><p></p>
+</figure>
+</div>
+<p>Add this csv file into QGIS by adding it as a delimited text layer, as done before while importing the not_found_schools1 dataset.</p>
+<p>Similarly to the 2021 schools data extraction, the column names have to be renamed so as to perform a merge. After merging the 2 layers, unnecessary columns should be removed from the merged layer as well. After that, export this merged layer as a geopackage file, and name it 'education 2018'.</p>
+<p>Right click on this new geopackage layer and open its attribute table. Click on the select features by expression icon&nbsp;and select the Junior Colleges using the code shown in Figure 18.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-80EFE586.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 18</figcaption><p></p>
+</figure>
+</div>
+<p>Using the tools, select the junior colleges that have already merged and deselect the others. When you open your attribute table, it should look like Figure 19.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-3AEF1319.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 19</figcaption><p></p>
+</figure>
+</div>
+<p>Click on the inverse selection icon and save the selected features as geopackage. Make sure the CRS is set to EPSG3414 and that the 'save selected features only' checkbox is ticked. Name this layer 'no merged JCs'.</p>
+<p>From the menu bar, click on Vector &gt; Data management tools &gt; Merge vector layers. Merge the 'no merged JCs' layer with the 'education 2018' layer. Right click on this layer to open the attribute table. Rename the FIDs such that there is no null value. Click on the edit button to save all changes, and close the attribute table.</p>
+<p>Right click on this merged layer and export it as a geopackage. Make sure that the CRS is set to EPSG3414. Name this layer 'all schools 2018'</p>
+<p>Extracting schools which locations are no longer in use</p>
+<p>Next, we will be extracting the schools whose locations are no longer in use after the mergers.</p>
+<p>Using the csv files that we manually made from <a href="https://elite.com.sg/school-shift-2019" class="uri">https://elite.com.sg/school-shift-2019</a> and <a href="https://www.moe.gov.sg/-/media/files/news/press/2021/annex-school-mergers.ashx?la=en&amp;hash=F52BA582E438A9320B252F070762E621B059B854" class="uri">https://www.moe.gov.sg/-/media/files/news/press/2021/annex-school-mergers.ashx?la=en&amp;hash=F52BA582E438A9320B252F070762E621B059B854</a>, extract schools into separate layers:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary schools whose locations are no longer in use after the 2019 merger</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secondary schools whose locations are no longer in use after the 2019 merger</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Post-secondary schools whose locations are no longer in use after the 2019 merger</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary schools whose locations will no longer be in use after the 2022-2024 mergers</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secondary schools whose locations will no longer be in use after the 2022-2024 mergers</p>
+<p>We will first be extracting the primary schools whose locations are no longer in use after the 2019 merger.</p>
+<p><img src="images/paste-88B7A74B.png" class="img-fluid" width="500"></p>
+<p>This includes Balestier Hill Primary, Loyang Primary, MacPherson Primary, Coral Primary, East Coast Primary, Da Qiao Primary and East View Primary.</p>
+<p>From 'all schools 2018' layer, right click to open the attribute table.</p>
+<p>Click on the select features by expression icon.&nbsp; Select these schools whose locations will no longer be in use after the 2019 merger, using the code below in Figure 20</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-3D660162.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 20</figcaption><p></p>
+</figure>
+</div>
+<p>Click on select features. Close the attribute table. Right click on the 'all schools 2018' layer and export the selected features as a geopackage. Make sure the 'save selected features only' checkbox is ticked. Name this layer 'pri sch 2019 merged'</p>
+<p>Repeat the steps in section 6.1.4 for the other layers that were identified.</p>
+<p>Extracting road network layer.</p>
+<p>Open the 'gis_osm_roads_free_1' layer from the OSM file downloaded from Geofabrik. We first need to extract the road network layer that falls within Singapore only. From the menu bar, click on Vector &gt; Geoprocessing tools &gt; Clip.</p>
+<p>Select the input layer to be 'gis_osm_roads_free_1' , and the overlay layer to be the MP19 subzone boundary layer. Your screen should look like Figure 21.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-028345FF.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 21</figcaption><p></p>
+</figure>
+</div>
+<p>Click on the screwdriver icon for both layers, and change the invalid feature filtering option to 'Do not filter (Better Performance), as shown in Figure 22</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-F874CD21.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 22</figcaption><p></p>
+</figure>
+</div>
+<p>Go back to the parameters tab and click on run. After the process has finished running, a new layer, 'Clipped', should be added into your QGIS. The road networks in this layer should fall into the MP19 subzone boundary only, as seen in Figure 23, where the green roads are the clipped layer.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-F9DA4F1F.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 23</figcaption><p></p>
+</figure>
+</div>
+<p>Right click on this clipped layer and save it as a geopackage. Make sure that the CRS system is set to EPSG3414. Name this layer 'all roads'</p>
+</section>
+<section id="data-preparation" class="level3">
+<h3 class="anchored" data-anchor-id="data-preparation"><u><strong>Data Preparation</strong></u></h3>
+<section id="separating-schools-into-their-education-levels" class="level4">
+<h4 class="anchored" data-anchor-id="separating-schools-into-their-education-levels">Separating schools into their education levels</h4>
+<p>Next, we have to separate the primary, secondary, and post-secondary schools for each year.</p>
+<p>Right click on the 'all schools 2019' layer and open the attribute table. We first have to identify the schools with mixed levels, as they may be left out while we are separating the schools.</p>
+<p>Click on the select features by expression icon.&nbsp; Select the schools which have mixed levels, as shown in the code in Figure 24.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-7E173E53.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 24</figcaption><p></p>
+</figure>
+</div>
+<p>Click on select features and close the pop up window. The schools with mixed levels should be selected, as shown in Figure 25. Take a screenshot of this list for reference.</p>
+<p><img src="images/paste-08F670A4.png" class="img-fluid" width="500" alt="Figure 25"><br>
+</p>
+<p>The mixed levels can be discovered easily using a simple Google search. They can be compiled into a table as shown in Figure 26.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-47385AA4.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 26</figcaption><p></p>
+</figure>
+</div>
+<p>We have to take note of this list and their respective education levels since we have to add them in manually when selecting schools according to their education level.</p>
+<p>Unselect the schools with mixed levels. Click on the select features by expression icon.&nbsp; Select the primary schools using this code, as shown in Figure 27.</p>
+<p>“mainlevel_code” =&nbsp; ‘PRIMARY’ or&nbsp; “school_name” =&nbsp; ‘CATHOLIC HIGH SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘CHIJ ST. NICHOLAS GIRLS’’ SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘MARIS STELLA HIGH SCHOOL’</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-88B13359.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 27</figcaption><p></p>
+</figure>
+</div>
+<p>Click on the select features button, and close the attribute table. Right click on the 'all schools 2019' layer and export the selected features as a geopackage. Make sure that the CRS is set to EPSG3414 and that the 'save selected features only' checkbox is checked. Name this layer 'primary schools 2019'</p>
+<p>To select the secondary schools, right click on the 'all schools 2019' layer and open the attribute table again. Click on the select features by expression icon.&nbsp; Select the secondary schools using this code, as shown in Figure 28.</p>
+<p>“mainlevel_code” =&nbsp; ‘SECONDARY’ or&nbsp; “school_name” =&nbsp; ‘ANGLO-CHINESE SCHOOL (INDEPENDENT)’ or&nbsp; “school_name” =&nbsp; ‘CATHOLIC HIGH SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘CHIJ ST. NICHOLAS GIRLS’’ SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘DUNMAN HIGH SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘HWA CHONG INSTITUTION’ or&nbsp; “school_name” =&nbsp; ‘MARIS STELLA HIGH SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘NATIONAL JUNIOR COLLEGE’ or&nbsp; “school_name” =&nbsp; ‘NUS HIGH SCHOOL OF MATHEMATICS AND SCIENCE’ or&nbsp; “school_name” =&nbsp; ‘RAFFLES INSTITUTION’ or&nbsp; “school_name” =&nbsp; ‘RIVER VALLEY HIGH SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘SCHOOL OF THE ARTS, SINGAPORE’ or&nbsp; “school_name” =&nbsp; ‘SINGAPORE SPORTS SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘ST. JOSEPH’‘S INSTITUTION’ or&nbsp; “school_name” =&nbsp; ‘TEMASEK JUNIOR COLLEGE’</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-27B17A2F.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 28</figcaption><p></p>
+</figure>
+</div>
+<p>Click on the select features button, and close the attribute table. Right click on the 'all schools 2019' layer and export the selected features as a geopackage. Make sure that the CRS is set to EPSG3414 and that the 'save selected features only' checkbox is checked. Name this layer 'secondary schools 2019'</p>
+<p>Lastly, to select the post-secondary schools, right click on the 'all schools 2019' layer and open the attribute table again. Click on the select features by expression icon.&nbsp; Select the post-secondary schools using this code, as shown in Figure 29.</p>
+<p>“mainlevel_code” =&nbsp; ‘CENTRALISED INSTITUTE’ or&nbsp; “mainlevel_code” =&nbsp; ‘JUNIOR COLLEGE’ or “school_name” =&nbsp; ‘ANGLO-CHINESE SCHOOL (INDEPENDENT)’&nbsp; or&nbsp; “school_name” =&nbsp; ‘DUNMAN HIGH SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘HWA CHONG INSTITUTION’&nbsp; or&nbsp; “school_name” =&nbsp; ‘NATIONAL JUNIOR COLLEGE’ or&nbsp; “school_name” =&nbsp; ‘NUS HIGH SCHOOL OF MATHEMATICS AND SCIENCE’ or&nbsp; “school_name” =&nbsp; ‘RAFFLES INSTITUTION’ or&nbsp; “school_name” =&nbsp; ‘RIVER VALLEY HIGH SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘SCHOOL OF THE ARTS, SINGAPORE’ or&nbsp; “school_name” =&nbsp; ‘SINGAPORE SPORTS SCHOOL’ or&nbsp; “school_name” =&nbsp; ‘ST. JOSEPH’‘S INSTITUTION’ or&nbsp; “school_name” =&nbsp; ‘TEMASEK JUNIOR COLLEGE’</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-1422B91C.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 29</figcaption><p></p>
+</figure>
+</div>
+<p>Click on the select features button, and close the attribute table. Right click on the 'all schools 2019' layer and export the selected features as a geopackage. Make sure that the CRS is set to EPSG3414 and that the 'save selected features only' checkbox is checked. Name this layer 'post-secondary schools 2019'</p>
+<p>Repeat section 4.2.1. to separate the schools from all years into primary, secondary and post-secondary levels.</p>
+</section>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+<p><strong>Separating roads according to education levels</strong></p>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2"></h3>
+<p><strong>Primary School Road Network</strong></p>
+<p>As we derived that students attending primary schools either walk or drive to school, we have extracted the roads highlighted in yellow for our analysis. The description of these roads can be seen in Figure 30 as well.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-494B4BB1.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 30</figcaption><p></p>
+</figure>
+</div>
+<p>Right click on the 'all roads' layer to open the attribute table. Click on the select features by expression icon. Use this code to extract the roads that we need, as shown in Figure 31.</p>
+<p>“fclass” in (&nbsp; ‘motorway_link’ , ‘primary_link’ , ‘secondary_link’ , ‘tertiary_link’ , ‘trunk_link’ ,‘footway’ ,&nbsp; ‘motorway’ ,&nbsp; ‘pedestrian’ ,‘primary’ , ‘residential’ , ‘secondary’,&nbsp; ‘service’&nbsp; ,‘steps’&nbsp; ,‘tertiary’,&nbsp; ‘trunk’ , ‘unclassified’&nbsp; ,‘living_street’ )</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-44734FAD.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 31</figcaption><p></p>
+</figure>
+</div>
+<p>Click on the select features button. Close the attribute table. The selected road network should be highlighted in yellow, as shown in Figure 32.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-45F241C6.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 32</figcaption><p></p>
+</figure>
+</div>
+<p>Right click on this layer and export the selected features into a geopackage. Make sure that the CRS is set to EPSG3414 and the 'save selected features only' checkbox is ticked. Name this layer 'pri sch roads'.</p>
+<section id="secondary-and-post-secondary-road-network" class="level4">
+<h4 class="anchored" data-anchor-id="secondary-and-post-secondary-road-network">Secondary and Post-secondary Road Network</h4>
+<p>Unlike Primary school students, students in Secondary and Post-secondary schools rely on public transport networks, such as the MRT, to commute to and from school. Hence, we need to build a different road network from the one used for Primary schools.</p>
+<p>Right click on the 'all roads' layer and open the attribute table. Click on the select features by expression icon .&nbsp; Select all roads except for bridleways, as shown in the code in Figure 33.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-F6595E0D.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 33</figcaption><p></p>
+</figure>
+</div>
+<p>Right click on this layer and export it as a geopackage file. Make sure that the CRS is set to EPSG3414 and that the 'save selected features only' checkbox is ticked. Name this layer 'no bridleways'</p>
+<p>Import the 'gis_osm_railways_free_1' layer from the OSM zip file into QGIS. Right click on this layer to open the attribute table. Click on the select features by expression icon. Remove all the depots and unrelated railways as shown in Figure 34.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-FEFC0E58.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 34</figcaption><p></p>
+</figure>
+</div>
+<p>Click on select features and close the query window. Click on the inverse selection icon <img src="file:///C:/Users/User/AppData/Local/Temp/msohtmlclip1/01/clip_image002.gif" class="img-fluid">&nbsp;and close the attribute table. From the main map, check the data to make sure that all the MRT lines are selected and connected properly. You may have to manually select the Punggol LRT line.</p>
+<p>Right click on this layer and save it as a geopackage. Make sure that the CRS is set to EPSG3414 and that the 'save selected features only' checkbox is selected. Name this layer as 'MRT network'.</p>
+<p>From the menu bar, click on Vector &gt; Data Management Tools &gt; Merge Vector Layers. Select the input layers to be 'MRT network' and 'no bridleways' . Select the Destination CRS to be EPSG3414. Your window should look similar to Figure 35. Click on run.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-179E221E.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 35</figcaption><p></p>
+</figure>
+</div>
+<p>Right click on the merged layer and open the attribute table. Click on the field calculator icon. Update the FID such that there are no null values.This can be done via selecting 'Update existing field' and selecting fid. Enter the expression as shown in Figure 36, and click on ok.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-BF5BBF66.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 36</figcaption><p></p>
+</figure>
+</div>
+<p>Click on toggle editing to save edits. Close the attribute table. Right click on the merged layer and export it as a geopackage. Name this layer as 'mrt and no bridleways'. Make sure that the CRS is set to EPSG3414.</p>
+<p>Right click on this layer to open the attribute table. Click on the field calculator&nbsp;icon. Create a new field called 'speed'. Select the output field type to be Integer (32 bit), and input the code as shown in Figure 37.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-43F28AFE.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 37</figcaption><p></p>
+</figure>
+</div>
+<p>This makes the speed of the railway lines 90. This also corrects the maxspeed of the normal footpaths, since a speed of 0 does not make sense. Click on ok, and click on the pencil icon to save changes.</p>
+</section>
+</section>
+</section>
+<section id="preparing-maps-for-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="preparing-maps-for-analysis"><u><strong>Preparing Maps for Analysis</strong></u></h2>
+<p>Creating a hexagonal grid with centroids for Singapore</p>
+<p>From the menu bar, select Vector &gt; Research Tools &gt; Create Grids</p>
+<p>Select the grid type to be Hexagon (Polygon), and select the grid extent to be mpsz.</p>
+<p>Set horizontal and vertical spacing to be 500</p>
+<p>Set the Grid CRS as EPSG3414.</p>
+<p>Click on the 'open output file after running algorithm' checkbox.</p>
+<p>Your window should look like Figure 38. Click on run.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-E04E010C.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 38</figcaption><p></p>
+</figure>
+</div>
+<p>After the process has finished running, a new temporary layer, Grid, should be added into your QGIS. Place the mpsz layer on top of the grid layer. Your map should look like Figure 39.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-7EDBCC2C.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 39</figcaption><p></p>
+</figure>
+</div>
+<p>From the menu bar, click on the select by location icon .</p>
+<p>Input the layers as shown in Figure 40, and run the process.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-6BBA41B4.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 40</figcaption><p></p>
+</figure>
+</div>
+<p>Your map should look like Figure 41 after the process has finished running. Clean the selection by removing the hexagons that are not within the Singapore Island boundary, and select those who are supposed to be in the boundary.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-3ACB9B9C.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 41</figcaption><p></p>
+</figure>
+</div>
+<p>Right click on the Grid layer and export the selected features as a geopackage. Make sure that the CRS is set to EPSG3414 and that the 'save selected features only' checkbox is ticked. Name this layer 'hexagonal grid'. Your new layer should look like Figure 42.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-B2B6B2D2.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 42</figcaption><p></p>
+</figure>
+</div>
+<p><em>Figure 42</em></p>
+<p>To compute the hexagon centroids, from the menu bar, select Vector -&gt; Geometry Tools -&gt; Centroids.</p>
+<p>Select the input layer to be hexagon grid, and run the process. Your window should look similar to Figure 43 <img src="images/paste-3F9408D2.png" class="img-fluid" width="500" alt="Figure 43"></p>
+<p>A new temporary layer called Centroids should be created after the process has finished running. Save this layer as a geopackage and name it 'hex_centroids'. Make sure the CRS is set to EPSG3414. Your layer should look similar to Figure 44.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-C2E39581.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 44</figcaption><p></p>
+</figure>
+</div>
+<section id="network-accessibility-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="network-accessibility-analysis">Network accessibility analysis</h4>
+<p>Next, we will be performing network accessibility analysis using QNEAT3, a QGIS network analysis toolbox on QGIS. We will be using the OD Matrix From Layers as table (m:n) tool.</p>
+<p>This tool allows us to calculate the shortest distance from a hexagon centroid to a school, using the road network analysis.</p>
+<p>From the menu bar, click on Processing &gt; Toolbox to open the Processing Toolbox. In the search bar, type in 'OD Matrix', and click on OD Matrix From Layers as table (m:n).</p>
+<p>We will first be performing analysis on the primary schools.</p>
+<p>For the network layer, select 'pri sch roads'</p>
+<p>For the From-Point layer, select 'hex_centroid'</p>
+<p>Select fid as the Unique Point ID Fields.</p>
+<p>For the To-Point Layer, select ' primary schools 2018'</p>
+<p>Choose 'Shortest Path (distance optimization)' for the Optimization Criterion.</p>
+<p>For the advanced parameters:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Select 'Ellipsoidal' for the Entry Cost calculation method'</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Select 'oneway' for the Direction Field</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For the values for the directions, set 'F' as the forward direction, 'T' as the backward direction, and 'B' as the value for both directions.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scroll down and set the Topology tolerance as 0.5</p>
+<p>Click on run. This process might take a long time to run. Your window should look similar to Figure 45 before running the process.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-F3B1CBF9.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 45</figcaption><p></p>
+</figure>
+</div>
+<p>After the process finishes running, a new temporary layer should be added into QGIS. Save this new layer as a geopackage and title it 'OD pri sch 2018'.</p>
+<p>Next, we will use the SQL tool of QGIS to select destination points with the shortest distance.</p>
+<p>At the Search pane of Processing Toolbox, type SQL.</p>
+<p>Double-click on Execute SQL of Vector general.</p>
+<p>Execute SQL dialog window appears.</p>
+<p>For Additional input datasources, select on the button at the right end. Click on the checkbox Output OD Matrix. Your window should look like Figure 46. Click on ok to return to the parameter tab.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-58C8A883.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 46</figcaption><p></p>
+</figure>
+</div>
+<p>At SQL query panel, type the following SQL</p>
+<p>select origin_id, destination_id, min(total_cost) as shortest_distance</p>
+<p>from input1 group by origin_id</p>
+<p>For Geometry type, select No Geometry from the drop-down list.</p>
+<p>Run the process.</p>
+<p>After the process has finished running, there should be a new temporary SQL query layer in your QGIS. Right click on this layer to open the attribute table. It should look similar to Figure 47.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-67353984.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 47</figcaption><p></p>
+</figure>
+</div>
+<p>Save this output as a geopackage and name it 'acc_prisch_2018'.</p>
+<p>Next, we have to map the accessibility values. At the Layers panel right-click on 'hexagon grid' layer and select Duplicate Layer from the context menu. Rename the layer to 'accessibility to pri sch 2018'</p>
+<p>We will need to join 'acc_prisch_2018' to 'accessibility to pri sch 2018' using the fid of both layers.</p>
+<p>At the Layer panel, right-click on 'accessibility to pri sch 2018' and select Properties from the context menu.</p>
+<p>The Properties dialog window appears.</p>
+<p>At the option panel, click on Joins.</p>
+<p>Click on + button to add a join.</p>
+<p>The Add Vector Join dialog window appears.</p>
+<p>For Join layer, select&nbsp; 'acc_prisch_2018' from the drop-down list.</p>
+<p>For Join field, select fid from the drop-down list.</p>
+<p>For Target field, select fid from the drop-down lsit.</p>
+<p>Keep the checkbox in front of Cache join layer in memory checked.</p>
+<p>Your window should look like Figure 48</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-3EF988B0.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 48</figcaption><p></p>
+</figure>
+</div>
+<p>Click on ok, then click on apply. Right click on the 'accessibility to pri sch 2018' layer and open the attribute table. You should see the new columns from the 'acc_prisch_2018' layer in the attribute table, as shown in Figure 49.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-C93E12F1.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 49</figcaption><p></p>
+</figure>
+</div>
+<p>Double click on this layer to open the properties window. Toggle to the symbology tab. We will now make the choropleth map.</p>
+<p>From the drop-down box, select 'graduated'</p>
+<p>Select the value as the shortest_distance column</p>
+<p>At the bottom left, select the mode to be 'Natural Breaks (Jenks)'.</p>
+<p>Adjust the number of classes to be 20.</p>
+<p>Reselect the colour ramp reds to get a wider range of colours on the map.</p>
+<p>Click on classify. Your window should look like Figure 50</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-687DB94F.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 50</figcaption><p></p>
+</figure>
+</div>
+<p>Click on apply and close the window. Your map should look like Figure 51.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-19D3DD86.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 51</figcaption><p></p>
+</figure>
+</div>
+<p>Repeat the steps in section 5.3 to create hexagonal choropleth maps for these layers:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2018</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary schools</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secondary schools</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Post-secondary schools</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2019</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary schools</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secondary Schools</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Post-secondary schools</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2024</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary schools</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secondary schools</p>
+</section>
+<section id="section-3" class="level4">
+<h4 class="anchored" data-anchor-id="section-3">7.3.3</h4>
+<p>Creating a changes map</p>
+<p>As the changes over the years for some maps are barely visible, we will create a changes map which identifies the hexagons in the grids that have had changes to accessibility.</p>
+<p>Duplicate one of the accessibility map layers (e.g.&nbsp;2019 sec schs). Right click on the layer and click on 'duplicate layer'.</p>
+<p>Double click on the duplicated layer and open the 'joins' tab. Click the plus button at the bottom to create a new join layer. As we will be comparing the changes in secondary schools between 2018 and 2019, we will select the 2018 secondary school layer as the layer to be joined to. Ensure that the join and target field are both fid, as shown in Figure 52.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-C6EF0C76.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 52</figcaption><p></p>
+</figure>
+</div>
+<p>Click on OK. Close the dialog window and right click on the layer to open the attribute table.</p>
+<p>Click on open field calculator&nbsp;to create a new field</p>
+<p>Create a new field called 'differences' as shown using the code in Figure 53. Select the output field type to be 'Decimal number (real).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-7A760B17.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 53</figcaption><p></p>
+</figure>
+</div>
+<p>Click on ok. This value should be difference between the shortest distance between both years. This would show either a positive or negative change.</p>
+<p>Save the changes by clicking on the edit button and closing the attribute table. Double click on the layer and open the symbology tab.</p>
+<p>Change the Symbology to Graduated, and choose the newly created difference field for the value</p>
+<p>Choose Natural Breaks (Jenks) as the mode and enter in 20 classes. Click classify</p>
+<p>Choose Red Blues as the colour ramp. Your window should look like Figure 54.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-B0D2FF58.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 54</figcaption><p></p>
+</figure>
+</div>
+<p>We will next edit the colour ramp to adjust the colours such that the interval where 0 is will be white.</p>
+<p>Click on the colour ramp to open the window as shown in Figure 55. Drag the points around to make the value of 0 as close to the colour white as possible.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-FE5CD0ED.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 55</figcaption><p></p>
+</figure>
+</div>
+<p>Click on ok. Add a class using the</p>
+<p>&nbsp;button to make 0 white.</p>
+<p>Move the 0 class right where the blues and reds meet</p>
+<p>Edit the values above and below the new 0 class, as shown in Figure 56</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-5E657263.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 56</figcaption><p></p>
+</figure>
+</div>
+<p>Ensure that the ramp is such that blue is for negative values and red is for positive values. Your resulting map should be similar to Figure 57.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-EB8FA87D.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 57</figcaption><p></p>
+</figure>
+</div>
+<p>Repeat the steps to create a changes map for these years:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary schools 2018-2019</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary schools 2019-2024</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secondary schools 2018-2019</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secondary schools 2019-2024</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Post-secondary schools 2018-2019</p>
+<p>Symbolization of schools</p>
+<p>Next, we will be adding symbols to the different school layers to better differentiate them on our map. We will first be preparing the map which shows the location of all schools that have existed from 2018 to 2024. However, we will classify them in different colours, based on:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Schools which have been merged in 2018</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Schools which have been merged in 2022-2024.</p>
+<p>&nbsp;</p>
+<p>We will need these layers:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hexagonal grid of Singapore</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Pri sch 2019 merged'</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Pri sch 2022-2024 merged'</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pri schs 2019</p>
+<p>&nbsp;</p>
+<p>Import the hexagonal grid layer into QGIS. Double click on it and toggle to the symbology tab. Click on simple fill and select 'simple marker' instead. Change the colour to be #9c9c9c. Your window should look like Figure 58.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-996B3D72.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 58</figcaption><p></p>
+</figure>
+</div>
+<p><em>Figure 58</em></p>
+<p>Click on ok. Your grid should look like Figure 59.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-C7D7369C.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 59</figcaption><p></p>
+</figure>
+</div>
+<p>&nbsp;</p>
+<p>Next, open the 'pri schs 2019' layer. Double click on it and toggle to the symbology tab.</p>
+<p>Click on simple fill and select 'SVG marker'. Select the blackboard symboland set the icon size to be 3.0mm. Change the colour of the icon to #1a7623. Your window should look like Figure 60. Click on apply and close the window.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-EF6559EC.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 60</figcaption><p></p>
+</figure>
+</div>
+<p>Next, open the 'pri sch 2019 merged' layer. Double click on it and toggle to the symbology tab. Click on simple fill and select 'SVG marker'. Select the blackboard symbol&nbsp;and set the icon size to be 3.0mm. Change the colour of the icon to #ff0501. Your window should look like Figure 61. Click on apply and close the window.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-21A8D06C.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 61</figcaption><p></p>
+</figure>
+</div>
+<p>Lastly, open the 'pri schs 2022-2024 merged' layer.&nbsp; Double click on it and toggle to the symbology tab. Click on simple fill and select 'SVG marker'. Select the blackboard symbol&nbsp;and set the icon size to be 3.0mm. Change the colour of the icon to #ffc801. Your window should look like Figure 62. Click on apply and close the window.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-F657FAFE.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 62</figcaption><p></p>
+</figure>
+</div>
+<p>In order to see all layers and their respective colours, the layers should be arranged as shown in Figure 63 in the layers panel.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-CD5EA132.png" class="img-fluid figure-img" width="300"></p>
+<p></p><figcaption class="figure-caption">Figure 63</figcaption><p></p>
+</figure>
+</div>
+<p>Your map should look like Figure 64.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-374FB27C.png" class="img-fluid figure-img" width="600"></p>
+<p></p><figcaption class="figure-caption">Figure 64</figcaption><p></p>
+</figure>
+</div>
+<p>Repeat section 6.3.4 so as to represent:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary schools 2018-2024 (already done)</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secondary schools 2018-2024</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Post-secondary schools 2018-2019</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *There were no mergers of post-secondary schools after the 2019 merger</p>
+<p>&nbsp;</p>
+<p><br>
+</p>
 
 
+</section>
 </section>
 </section>
 

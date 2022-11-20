@@ -5,31 +5,33 @@ editor: visual
 
 # **Overview**
 
-In this project, we are given two themes and sub-themes. Detailed description of this project is available on this [page](https://smt201-ay2022-23t1.netlify.app/gisproject).
+Ex-Schools Me! is a project under the module SMT201 Geographic Information Systems for Urban Planning by Professor Kam Tin Seong in Singapore Managament University (SMU).
+
+Our group has chosen Theme 2: \'Geography of Accessibility with GIS-based Network Analysis\' and we decided to focus on Sub-Theme 1: \'Impact of Closures or Mergers of Education Institutions on Equity of Access\'. 
+
+Since these schools closed after the mergers, we aptly coined the phrase Ex-Schools as part of our name.
 
 ## Motivation:
 
 The impacts of the mergers of education institutions that affects the equity of access by people.
 
+-   Research on how mergers affect people
+
 -   Shortest path (The distance that people have to travel to school)
 
--   Network analysis on how the transportation changes from different education levels e.g. Primary School vs Secondary School (Analyse how accessible the education institutions are from neighbourhood buildings)
+-   Network analysis on how the transportation changes from different education levels e.g. Primary School vs Secondary School (Analyse how accessible the education institutions are from neighbourhood buildings
 
-## Objectives:
+## Sources of Data:
 
-The objective of this project are as follows:
+The data used are as follows:
 
--   Objective 1: Find out the patterns of schools before merger (Year 2018), present merger (Year 2019) and future merger (Year 2024)
+-   Data.gov.sg
 
--   Objective 2: Accessibilities of schools in different educational levels before (Year 2018-2019) and after merger (Year 2019-2024)
+-   LTA Datamall
 
-## Proposal Timeline (Gannt Chart)
+-   Open Street Map
 
-The project timeline are as follows:
-
-For clearer view: [Gannt Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vQfp8nQq9sOdxo7don6llHvtJsFcPcDSNXDOhVZDazuZKyIKOQxxMHiWK6QAAm8Bg/pubhtml)
-
-## ![](images/paste-817CD548.png)
+-   Google
 
 ## Literature Review
 

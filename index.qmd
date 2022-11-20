@@ -1,8 +1,24 @@
 ---
-title: "G2 TEAM7"
+title: "G2 TEAM 7"
 ---
 
-Welcome to our GIS Project web site. Our group is working on Theme 2: Geography of Accessibility with GIS-based Network Analysis and on specific sub-theme 1: Impact of closures or mergers of education institutions on equity of access.
+![](images/paste-40F6960C.png){fig-align="center" width="350"}
+
+Ex-Schools Me! is a project under the module SMT201 Geographic Information Systems for Urban Planning by Professor Kam Tin Seong in Singapore Managament University (SMU).
+
+Our group has chosen Theme 2: \'Geography of Accessibility with GIS-based Network Analysis\' and we decided to focus on Sub-Theme 1: \'Impact of Closures or Mergers of Education Institutions on Equity of Access\'. 
+
+Since these schools closed after the mergers, we aptly coined the phrase Ex-Schools as part of our name.
+
+## Motivation:
+
+The impacts of the mergers of education institutions that affects the equity of access by people.
+
+-   Research on how mergers affect people
+
+-   Shortest path (The distance that people have to travel to school)
+
+-   Network analysis on how the transportation changes from different education levels e.g. Primary School vs Secondary School (Analyse how accessible the education institutions are from neighbourhood buildings)
 
 ## Data Used:
 
@@ -16,9 +32,29 @@ Additional Data Created:
 
 ## Scope of work:
 
-The scope of work are as follows:
+-   Levels studied - Primary, Secondary, Post-Secondary
 
-## Delegation of work:
+-   Time frame: Past mergers - 2019, Current - 2020-2021, Future mergers - all announced from 2022-2024
+
+-   Transport Analysis for Anderson Junior College and Serangoon Junior College
+
+## Objectives:
+
+The objective of this project are as follows:
+
+-   Objective 1: Prepare accessibility maps to identify and compare the change in accessibility over the years for the 3 levels of education
+
+-   Objective 2: Prepare a catchment map to prove and understand the decisions of certain school sites over others for merged schools
+
+## **Project Timeline (Gannt Chart)**
+
+The project timeline are as follows:
+
+For clearer view: [Gannt Chart](https://docs.google.com/spreadsheets/d/e/2PACX-1vQfp8nQq9sOdxo7don6llHvtJsFcPcDSNXDOhVZDazuZKyIKOQxxMHiWK6QAAm8Bg/pubhtml)
+
+## ![](images/paste-817CD548.png)
+
+## **Delegation of work:**
 
 We delegate the roles equally among the 3 of us such that 2 people will be in charge of the QGIS (Edlyn & Beatrice), 3 of us to do posters and report together, 1 person to handle the webpage (Shu Ying). We decided to have this allocation so that all of us can focus on different areas and we can complete the work productively. Even so, all of us are still involved in all of the segments as we meet regularly to complete the project as a team.
 
@@ -33,11 +69,18 @@ We delegate the roles equally among the 3 of us such that 2 people will be in ch
 | Project Minutes                                                        | Shu Ying         |
 | Project Website                                                        | Shu Ying         |
 
+| Data Collection and Visualisation | Person-In-Charge |
+|-----------------------------------|------------------|
+| Primary School                    | Edlyn            |
+| Secondary School                  | Beatrice         |
+| Post-Secondary School             | Beatrice         |
+| Transport Analysis                | Beatrice         |
+
 -   For every updates we have as a team, Shu Ying will make changes on this webpage, commit and push it at the end of the day
 
 -   Our team have also created a slack group and connected slack with Github so that all members are aware that for every pushes as we will receive updates
 
-## Project Links:
+## **Project Links:**
 
 Our Github Link: <https://github.com/ShuYing0506/GISProject>
 

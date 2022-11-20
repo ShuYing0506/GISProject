@@ -5,4 +5,4 @@ editor: visual
 
 # **Poster:**
 
-![](images/Poster_2.jpg)
+![](images/Final_Ver.jpg)

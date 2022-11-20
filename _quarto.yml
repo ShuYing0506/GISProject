@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "EX-SCHOOLS ME!"
+  title: "G2 Team 7: Ex-Schools Me!"
   navbar:
     left:
       - href: overview.qmd

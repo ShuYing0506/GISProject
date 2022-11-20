@@ -4,3 +4,7 @@ editor: visual
 ---
 
 ## **Takeaways from this Project**
+
+Some of the takeaways for this project:
+
+-   I learnt to be able to produce datasets and make valuable insights about
