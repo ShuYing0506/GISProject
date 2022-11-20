@@ -1379,8 +1379,7 @@ export it as a geopackage file. Name it \'10 mins Iso-Area Polygons\'
 
 ## 
 
-
-**Creating Printed Map Layouts**
+[**Creating Printed Map Layouts**]{.underline}
 
 To create a printed map layout, click on
 Project from the menu bar. Click on new print layout. We will create a printed
