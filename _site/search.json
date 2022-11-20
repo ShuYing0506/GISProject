@@ -9,28 +9,28 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "G2 TEAM7",
+    "title": "G2 TEAM 7",
     "section": "",
     "text": "Ex-Schools Me! is a project under the module SMT201 Geographic Information Systems for Urban Planning by Professor Kam Tin Seong in Singapore Managament University (SMU).\nOur group has chosen Theme 2: 'Geography of Accessibility with GIS-based Network Analysis' and we decided to focus on Sub-Theme 1: 'Impact of Closures or Mergers of Education Institutions on Equity of Access'.\nSince these schools closed after the mergers, we aptly coined the phrase Ex-Schools as part of our name."
   },
   {
     "objectID": "index.html#data-used",
     "href": "index.html#data-used",
-    "title": "G2 TEAM7",
+    "title": "G2 TEAM 7",
     "section": "Data Used:",
     "text": "Data Used:\nThe data used are as follows:\n\nData.gov (School Directory and Information 24 March Year 2021)\n\nAdditional Data Created:\n\nCreated additional CSV files to input all mergers of different years, merged schools in Year 2019 and future merges Year 2022 - Year 2024"
   },
   {
     "objectID": "index.html#scope-of-work",
     "href": "index.html#scope-of-work",
-    "title": "G2 TEAM7",
+    "title": "G2 TEAM 7",
     "section": "Scope of work:",
     "text": "Scope of work:\n\nLevels studied - Primary, Secondary, Post-Secondary\nTime frame: Past mergers - 2019, Current - 2020-2021, Future mergers - all announced from 2022-2024\nTransport Analysis for Anderson Junior College and Serangoon Junior College"
   },
   {
     "objectID": "index.html#project-links",
     "href": "index.html#project-links",
-    "title": "G2 TEAM7",
+    "title": "G2 TEAM 7",
     "section": "Project Links:",
     "text": "Project Links:\nOur Github Link: https://github.com/ShuYing0506/GISProject\nSetting up Netlify: https://app.netlify.com/sites/smtgroup7/settings/domain\nSlack workspace: https://smt201group7.slack.com"
   },
@@ -46,7 +46,7 @@
     "href": "overview.html",
     "title": "G2 Team 7: Ex-Schools Me!",
     "section": "",
-    "text": "Ex-Schools Me! is a project under the module SMT201 Geographic Information Systems for Urban Planning by Professor Kam Tin Seong in Singapore Managament University (SMU).\nOur group has chosen Theme 2: 'Geography of Accessibility with GIS-based Network Analysis' and we decided to focus on Sub-Theme 1: 'Impact of Closures or Mergers of Education Institutions on Equity of Access'. \nSince these schools closed after the mergers, we aptly coined the phrase Ex-Schools as part of our name.\n\n\nThe impacts of the mergers of education institutions that affects the equity of access by people.\n\nResearch on how mergers affect people\nShortest path (The distance that people have to travel to school)\nNetwork analysis on how the transportation changes from different education levels e.g. Primary School vs Secondary School (Analyse how accessible the education institutions are from neighbourhood buildings\n\n\n\n\nThe data used are as follows:\n\nData.gov.sg\nLTA Datamall\nOpen Street Map\nGoogle\n\n\n\n\nIn this project, the following articles are reviewed to help us in understanding the mergers.\n\nhttps://www.straitstimes.com/singapore/education/2019-school-mergers-7-things-to-know\nhttps://www.channelnewsasia.com/singapore/moe-schools-merging-new-town-tanglin-telok-kurau-201401\nhttps://www.straitstimes.com/singapore/education/school-mergers-2019-why-were-the-8-government-jcs-the-ones-selected-for-merger\nhttps://www.gov.sg/article/why-is-the-ministry-of-education-merging-some-schools\nhttps://guidesify.com/merger-of-jcs-singapore/"
+    "text": "We delegate the roles equally among the 3 of us such that 2 people will be in charge of the QGIS (Edlyn & Beatrice), 3 of us to do posters and report together, 1 person to handle the webpage (Shu Ying). We decided to have this allocation so that all of us can focus on different areas and we can complete the work productively. Even so, all of us are still involved in all of the segments as we meet regularly to complete the project as a team.\n\n\n\n\n\n\n\nJob Scope\nPerson-In-Charge\n\n\n\n\nSelection of project focus and conducting literature review\nTeam\n\n\nPerforming GIS analysis\nTeam\n\n\nProject Report\nTeam\n\n\nData collection, extraction, integration, transformation and wrangling\nEdlyn & Beatrice\n\n\nDesigning and building GIS model and database\nEdlyn & Beatrice\n\n\nPreparing Poster\nBeatrice\n\n\nProject Minutes\nShu Ying\n\n\nProject Website\nShu Ying\n\n\n\n\n\n\nData Collection and V isualisation\nPerson-In-Charge\n\n\n\n\nPrimary School\nEdlyn\n\n\nSecondary School\nBeatrice\n\n\nPost-Secondary School\nBeatrice\n\n\nTransport Analysis\nBeatrice\n\n\n\n\nFor every updates we have as a team, Shu Ying will make changes on this webpage, commit and push it at the end of the day\nOur team have also created a slack group and connected slack with Github so that all members are aware that for every pushes as we will receive updates\n\n\n\n\nThe data used are as follows:\n\nData.gov.sg\nLTA Datamall\nOpen Street Map\nGoogle\n\n\n\n\nIn this project, the following articles are reviewed to help us in understanding the mergers.\n\nhttps://www.straitstimes.com/singapore/education/2019-school-mergers-7-things-to-know\nhttps://www.channelnewsasia.com/singapore/moe-schools-merging-new-town-tanglin-telok-kurau-201401\nhttps://www.straitstimes.com/singapore/education/school-mergers-2019-why-were-the-8-government-jcs-the-ones-selected-for-merger\nhttps://www.gov.sg/article/why-is-the-ministry-of-education-merging-some-schools\nhttps://guidesify.com/merger-of-jcs-singapore/"
   },
   {
     "objectID": "overview.html#motivation",
@@ -156,7 +156,7 @@
   {
     "objectID": "index.html#delegation-of-work",
     "href": "index.html#delegation-of-work",
-    "title": "G2 TEAM7",
+    "title": "G2 TEAM 7",
     "section": "Delegation of work:",
     "text": "Delegation of work:\nWe delegate the roles equally among the 3 of us such that 2 people will be in charge of the QGIS (Edlyn & Beatrice), 3 of us to do posters and report together, 1 person to handle the webpage (Shu Ying). We decided to have this allocation so that all of us can focus on different areas and we can complete the work productively. Even so, all of us are still involved in all of the segments as we meet regularly to complete the project as a team.\n\n\n\n\n\n\n\nJob Scope\nPerson-In-Charge\n\n\n\n\nSelection of project focus and conducting literature review\nTeam\n\n\nPerforming GIS analysis\nTeam\n\n\nProject Report\nTeam\n\n\nData collection, extraction, integration, transformation and wrangling\nEdlyn & Beatrice\n\n\nDesigning and building GIS model and database\nEdlyn & Beatrice\n\n\nPreparing Poster\nBeatrice\n\n\nProject Minutes\nShu Ying\n\n\nProject Website\nShu Ying\n\n\n\n\n\n\nData Collection and Visualisation\nPerson-In-Charge\n\n\n\n\nPrimary School\nEdlyn\n\n\nSecondary School\nBeatrice\n\n\nPost-Secondary School\nBeatrice\n\n\nTransport Analysis\nBeatrice\n\n\n\n\nFor every updates we have as a team, Shu Ying will make changes on this webpage, commit and push it at the end of the day\nOur team have also created a slack group and connected slack with Github so that all members are aware that for every pushes as we will receive updates"
   },
@@ -205,21 +205,21 @@
   {
     "objectID": "index.html#motivation",
     "href": "index.html#motivation",
-    "title": "G2 TEAM7",
+    "title": "G2 TEAM 7",
     "section": "Motivation:",
     "text": "Motivation:\nThe impacts of the mergers of education institutions that affects the equity of access by people.\n\nResearch on how mergers affect people\nShortest path (The distance that people have to travel to school)\nNetwork analysis on how the transportation changes from different education levels e.g. Primary School vs Secondary School (Analyse how accessible the education institutions are from neighbourhood buildings)"
   },
   {
     "objectID": "index.html#objectives",
     "href": "index.html#objectives",
-    "title": "G2 TEAM7",
+    "title": "G2 TEAM 7",
     "section": "Objectives:",
     "text": "Objectives:\nThe objective of this project are as follows:\n\nObjective 1: Prepare accessibility maps to identify and compare the change in accessibility over the years for the 3 levels of education\nObjective 2: Prepare a catchment map to prove and understand the decisions of certain school sites over others for merged schools"
   },
   {
     "objectID": "index.html#project-timeline-gannt-chart",
     "href": "index.html#project-timeline-gannt-chart",
-    "title": "G2 TEAM7",
+    "title": "G2 TEAM 7",
     "section": "Project Timeline (Gannt Chart)",
     "text": "Project Timeline (Gannt Chart)\nThe project timeline are as follows:\nFor clearer view: Gannt Chart"
   },
@@ -235,7 +235,7 @@
     "href": "findings.html",
     "title": "G2 Team 7: Ex-Schools Me!",
     "section": "",
-    "text": "Some of the takeaways for this project:\n\nI learnt to be able to produce datasets and make valuable insights about"
+    "text": "Some of the takeaways for this project:\n\nWe learnt to be able to produce datasets and make valuable insights of the trend of years that mergers of schools take place and make good inferences with the transportation analysis.\nEven though QGIS can help us analyse the equity of access to education, it is still limited in its functions as we are unable to analyse other factors, such as whether the environment surrounding the schools are conducive (e.g. construction areas, etc).\nDepending on the target demographic population, the network layers have to be changed since each population has different needs. For example, the road network layer for primary school students is different from that for secondary school students."
   },
   {
     "objectID": "methodology.html#section-1",

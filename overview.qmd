@@ -5,23 +5,33 @@ editor: visual
 
 # **Overview**
 
-Ex-Schools Me! is a project under the module SMT201 Geographic Information Systems for Urban Planning by Professor Kam Tin Seong in Singapore Managament University (SMU).
+## **Delegation of work:**
 
-Our group has chosen Theme 2: \'Geography of Accessibility with GIS-based Network Analysis\' and we decided to focus on Sub-Theme 1: \'Impact of Closures or Mergers of Education Institutions on Equity of Access\'. 
+We delegate the roles equally among the 3 of us such that 2 people will be in charge of the QGIS (Edlyn & Beatrice), 3 of us to do posters and report together, 1 person to handle the webpage (Shu Ying). We decided to have this allocation so that all of us can focus on different areas and we can complete the work productively. Even so, all of us are still involved in all of the segments as we meet regularly to complete the project as a team.
 
-Since these schools closed after the mergers, we aptly coined the phrase Ex-Schools as part of our name.
+| Job Scope                                                              | Person-In-Charge |
+|------------------------------------------------------------------------|------------------|
+| Selection of project focus and conducting literature review            | Team             |
+| Performing GIS analysis                                                | Team             |
+|  Project Report                                                        | Team             |
+| Data collection, extraction, integration, transformation and wrangling | Edlyn & Beatrice |
+| Designing and building GIS model and database                          | Edlyn & Beatrice |
+| Preparing Poster                                                       | Beatrice         |
+| Project Minutes                                                        | Shu Ying         |
+| Project Website                                                        | Shu Ying         |
 
-## Motivation:
+| Data Collection and V isualisation | Person-In-Charge |
+|------------------------------------|------------------|
+| Primary School                     | Edlyn            |
+| Secondary School                   | Beatrice         |
+| Post-Secondary School              | Beatrice         |
+| Transport Analysis                 | Beatrice         |
 
-The impacts of the mergers of education institutions that affects the equity of access by people.
+-   For every updates we have as a team, Shu Ying will make changes on this webpage, commit and push it at the end of the day
 
--   Research on how mergers affect people
+-   Our team have also created a slack group and connected slack with Github so that all members are aware that for every pushes as we will receive updates
 
--   Shortest path (The distance that people have to travel to school)
-
--   Network analysis on how the transportation changes from different education levels e.g. Primary School vs Secondary School (Analyse how accessible the education institutions are from neighbourhood buildings
-
-## Sources of Data:
+## **Sources of Data:**
 
 The data used are as follows:
 
@@ -33,7 +43,7 @@ The data used are as follows:
 
 -   Google
 
-## Literature Review
+## **Literature Review**
 
 In this project, the following articles are reviewed to help us in understanding the mergers.
 
