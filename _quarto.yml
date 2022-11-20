@@ -15,8 +15,7 @@ website:
         text: Lesson Learnt
       - href: poster.qmd
         text: Poster
-      - href: webmaps.qmd
-        text: Web Maps
+
 
         
     right:

@@ -425,7 +425,7 @@ Right click on this clipped layer and save
 it as a geopackage. Make sure that the CRS system is set to EPSG3414. Name this
 layer \'all roads\'
 
-### [**Data Preparation**]{.underline}
+# [**Data Preparation**]{.underline}
 
 #### Separating schools into their education levels 
 
@@ -667,7 +667,7 @@ This makes the speed of the railway lines
 90. This also corrects the maxspeed of the normal footpaths, since a speed of 0
 does not make sense. Click on ok, and click on the pencil icon to save changes.
 
-## [**Preparing Maps for Analysis**]{.underline}
+# [**Preparing Maps for Analysis**]{.underline}
 
 Creating a hexagonal grid with centroids for Singapore
 
