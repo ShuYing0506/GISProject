@@ -7,6 +7,10 @@ editor: visual
 
 Some of the takeaways for this project:
 
+-   It is important to consider the limitations of using various QGIS functions when analysing data and drawing conclusions from it and take steps to minimise them.
+
+-   Being neat, organised and maintaining proper documentation goes a long way.
+
 -   We learnt to be able to produce datasets and make valuable insights of the trend of years that mergers of schools take place and make good inferences with the transportation analysis.
 
 -   Even though QGIS can help us analyse the equity of access to education, it is still limited in its functions as we are unable to analyse other factors, such as whether the environment surrounding the schools are conducive (e.g. construction areas, etc).

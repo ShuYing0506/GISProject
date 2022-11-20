@@ -1224,7 +1224,432 @@ Post-secondary schools 2018-2019
 \*There were no mergers of post-secondary schools after the
 2019 merger
 
+### Transport Analysis
+
+Import the Bus Stop Locations that have
+been downloaded from LTA datamall.
+
+From the \'2018 post-sec schs\' layer, select AJC
+and SJC and export them to a new geopackage layer titled \'AJC and SJC\'. To do
+this, right click on the layer to open the attribute table, Click on the select
+features by expression icon. Enter the code as shown in Figure 68
+and click on select features.
+![Figure 68](images/paste-2CA52B06.png){width="500"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Close the attribute table. Right click on
+this layer again and export selected features only as a geopackage.
+
+Next, we will create a buffer around the 2
+JCs. This buffer represents approximately 10 minutes of walking, which is an
+estimated 1km.
+
+From the menu bar, select Vector \>
+Geoprocessing Tools \> Buffer
+
+Select the input to be the \'AJC and SJC\'
+layer. Change the distance to be 1000, and segments to be 100. Leave the
+rest  as per default, and click run. The
+buffer dialog window should look like Figure 7.69.
+
+![Figure 7.69](images/paste-13CEBBB4.png){width="500"}
+
+Click on run. After the process has
+finished running, there should be a temporary layer created. Right click on
+this layer and export it as a geopackage. Name this layer \'AJC and SJC buffer\'.
+
+Next, we will be creating ISO-areas using
+polygons. From the menu bar, click on Processing \> Toolbox. At the searchbar
+of the processing toolbox, type \'iso\' and select \'Iso-Area as Polygons from
+Layer\'
+
+When the dialog window appears.
+
+Select \'sec sch onwards road network\' as
+the vector layer representing network
+
+For the start points, select \'AJC and SJC\'
+
+Select \'school_name\' as the Unique Point ID
+Field/
+
+Set the size of the iso-area and the
+contour interval to be 10000.
+
+The cellsize of the interpolation raster
+should be 10.
+
+Select shortest path (distance
+optimization) for the path type to calculate.
+
+Select \'oneway\' for the direction field
+
+Set \'F\' to be the value for the forward
+direction, \'T\' for the backward direction, and \'B\' for the both directional
+value.
+
+Your window should look like Figure 7.70.
+
+![Figure 7.70](images/paste-1490D16F.png){width="500"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Click on run. After the process has
+finished running, there should be a new temporary output layer added to QGIS.
+Right click on this layer and export it as a geopackage. Name it \'1km Iso Area
+Polygon\'. Your maps should look like Figure 7.71.
+
+![Figure 7.71](images/paste-1020A52B.png){width="500"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+We will now create another Iso Area polygon
+to find out the time taken.
+
+From <https://www.bhf.org.uk/how-you-can-help/events/training-zone/walking-training-zone/walking-faqs#:~:text=For%20a%20person%20with%20excellent,kilometre%20(6.4%20kilometres%20per%20hour)>,
+we have found that the average walking speed of a human is 5km/h. We will hence
+leave the default speed as 5.
+
+From the processing toolbox, open the
+iso-area as polygon from layer dialog window again.
+
+Fill in the required fields as shown in
+Figure 7.72. Make sure that fastest path (time optimization) is selected for
+the path type to calculate.
+
+![Figure 7.72](images/paste-8734527C.png){width="500"}
+
+Click on run. After the process has
+finished running, there should be 2 new output layers in QGIS, as shown in
+Figure 7.73.
+
+![Figure 7.73](images/paste-D201AD13.png){width="500"}
+
+We only need the polygon, which should be
+labelled as \'output polygon\' in the layers panel. Right click on this layer and
+export it as a geopackage file. Name it \'10 mins Iso-Area Polygons\'
+
+## 
+
+
+**Creating Printed Map Layouts**
+
+To create a printed map layout, click on
+Project from the menu bar. Click on new print layout. We will create a printed
+map layout for the accessibility to sec schools in 2018 as an example.
+
+After clicking on \'new print layout\', there
+should be a prompt to enter the name of the printed map layout. Enter \'2018 Sec
+Schools Accessibility\' and click ok.
+
+In the layout manager, from the menu bar,
+click on zoom full ![](file:///C:/Users/User/AppData/Local/Temp/msohtmlclip1/01/clip_image002.gif)  to see the full extent
+
  
+
+To
+add the map onto the printed layout, click on \'Add item\' \> \'Add Map\'. Click
+and drag to draw a rectangle where you want to place the map, as shown in
+Figure 7.74
+
+![Figure 7.74](images/paste-5F3EAAA6.png){width="500" height="360"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Release
+the mouse. The map should be added in, as shown in Figure 7.75
+
+![Figure 7.75](images/paste-AA36AE3E.png){width="500"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Make
+sure that the \'lock layers\' and \'lock style for layers\' checkboxes are ticked
+as well. This is to ensure that any changes made to the map will not affect the
+printed layout that we are creating. Your \'item properties\' panel should look
+similar to Figure 7.76
+
+![Figure 7.76](images/paste-1E384379.png){width="500"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To
+add the legend for the map, click on add item, add legend. Drag the cursor out
+on an empty space, and a legend will appear. Under item properties, scroll down
+and click on the checkbox next to only show items inside linked map, as shown
+in Figure 7.77
+
+![Figure 7.77](images/paste-F0E6026E.png){width="500"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Your
+printed layout should look similar to Figure 7.78
+
+![Figure 7.78](images/paste-10D50CEC.png){width="500"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A scale bar is needed as well. From the
+menu bar, click on Add item \> Add scale bar. Drag and release the mouse on
+the area you want to add the scale bar in. Set the properties of the scale bar
+to be as such in Figure 7.79
+
+![Figure 7.79](images/paste-6A28F1C1.png){width="500"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Your scale bar should look similar to the
+one in Figure 7.80
+
+![Figure 7.80](images/paste-4EB0B6C6.png)
+
+
+Next, we will add a North arrow. From the
+menu bar, click on Add item \> Add North Arrow
+
+Drag the mouse over the area you want to
+add the north arrow in, and release it to add it. Your printed layout should
+look similar to Figure 7.81
+
+![Figure 7.81](images/paste-98269790.png){width="500"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+We will now add a title to this layout.
+Click on Add item \> Add label. Similarly to the other steps, drag the mouse
+over the area you want to add the text in, and release the mouse to add a
+textbox.
+
+Under the item properties, type in the text
+\'Secondary School Accessibility 2018\'. Click on the small arrow next to font to
+adjust the font size to 24 points. Align the horizontal and vertical alignment
+to be the centre as well. The result should look something like Figure 7.82
+
+![Figure 7.82](images/paste-71DDD160.png){width="500"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Next, we will add coordinates and a grid
+for the map. Click on the map first.
+
+Scroll down to grids and click on the
+addition logo to add a grid to the map. After that, select \'grid 1\' and click
+on modify grid. Set the X and Y intervals to 15000 each. Click the arrow beside
+line style and decrease the opacity of the lines as well. Scroll down to the
+\'draw coordinates\' section and click on the checkbox. Select \'show all\' for the
+left and top coordinates, but select \'disabled\' for the right and bottom ones,
+as in Figure 7.83
+
+![Figure 7.83](images/paste-F3975C80.png){width="500"}
+
+After that, increase the distance to map
+frame and change the coordinate precision to improve the aesthetics of the
+grid, as shown in Figure 7.84
+
+![Figure 7.84](images/paste-55ACBE4C.png){width="300"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The resulting print layout should look
+similar to Figure 7.85
+
+![Figure 7.85](images/paste-DEBD9AD4.png){width="600"}
+
+Export the printed map layout as an image.
+To do this, select Layout from the menu bar, and click on \'export as image\'
+
+Repeat section 7.4 to create other printed
+map layouts that are needed.
 
 \
 

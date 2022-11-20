@@ -131,7 +131,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#preparing-maps-for-analysis" id="toc-preparing-maps-for-analysis" class="nav-link" data-scroll-target="#preparing-maps-for-analysis"><u><strong>Preparing Maps for Analysis</strong></u></a></li>
+  <li><a href="#preparing-maps-for-analysis" id="toc-preparing-maps-for-analysis" class="nav-link" data-scroll-target="#preparing-maps-for-analysis"><u><strong>Preparing Maps for Analysis</strong></u></a>
+  <ul class="collapse">
+  <li><a href="#transport-analysis" id="toc-transport-analysis" class="nav-link" data-scroll-target="#transport-analysis">Transport Analysis</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -803,7 +807,161 @@ ul.task-list li input[type="checkbox"] {
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secondary schools 2018-2024</p>
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Post-secondary schools 2018-2019</p>
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *There were no mergers of post-secondary schools after the 2019 merger</p>
+</section>
+<section id="transport-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="transport-analysis">Transport Analysis</h3>
+<p>Import the Bus Stop Locations that have been downloaded from LTA datamall.</p>
+<p>From the '2018 post-sec schs' layer, select AJC and SJC and export them to a new geopackage layer titled 'AJC and SJC'. To do this, right click on the layer to open the attribute table, Click on the select features by expression icon. Enter the code as shown in Figure 68 and click on select features. <img src="images/paste-2CA52B06.png" class="img-fluid" width="500" alt="Figure 68"></p>
+<p>Close the attribute table. Right click on this layer again and export selected features only as a geopackage.</p>
+<p>Next, we will create a buffer around the 2 JCs. This buffer represents approximately 10 minutes of walking, which is an estimated 1km.</p>
+<p>From the menu bar, select Vector &gt; Geoprocessing Tools &gt; Buffer</p>
+<p>Select the input to be the 'AJC and SJC' layer. Change the distance to be 1000, and segments to be 100. Leave the rest&nbsp; as per default, and click run. The buffer dialog window should look like Figure 7.69.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-13CEBBB4.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.69</figcaption><p></p>
+</figure>
+</div>
+<p>Click on run. After the process has finished running, there should be a temporary layer created. Right click on this layer and export it as a geopackage. Name this layer 'AJC and SJC buffer'.</p>
+<p>Next, we will be creating ISO-areas using polygons. From the menu bar, click on Processing &gt; Toolbox. At the searchbar of the processing toolbox, type 'iso' and select 'Iso-Area as Polygons from Layer'</p>
+<p>When the dialog window appears.</p>
+<p>Select 'sec sch onwards road network' as the vector layer representing network</p>
+<p>For the start points, select 'AJC and SJC'</p>
+<p>Select 'school_name' as the Unique Point ID Field/</p>
+<p>Set the size of the iso-area and the contour interval to be 10000.</p>
+<p>The cellsize of the interpolation raster should be 10.</p>
+<p>Select shortest path (distance optimization) for the path type to calculate.</p>
+<p>Select 'oneway' for the direction field</p>
+<p>Set 'F' to be the value for the forward direction, 'T' for the backward direction, and 'B' for the both directional value.</p>
+<p>Your window should look like Figure 7.70.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-1490D16F.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.70</figcaption><p></p>
+</figure>
+</div>
+<p>Click on run. After the process has finished running, there should be a new temporary output layer added to QGIS. Right click on this layer and export it as a geopackage. Name it '1km Iso Area Polygon'. Your maps should look like Figure 7.71.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-1020A52B.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.71</figcaption><p></p>
+</figure>
+</div>
+<p>We will now create another Iso Area polygon to find out the time taken.</p>
+<p>From <a href="https://www.bhf.org.uk/how-you-can-help/events/training-zone/walking-training-zone/walking-faqs#:~:text=For%20a%20person%20with%20excellent,kilometre%20(6.4%20kilometres%20per%20hour)" class="uri">https://www.bhf.org.uk/how-you-can-help/events/training-zone/walking-training-zone/walking-faqs#:~:text=For%20a%20person%20with%20excellent,kilometre%20(6.4%20kilometres%20per%20hour)</a>, we have found that the average walking speed of a human is 5km/h. We will hence leave the default speed as 5.</p>
+<p>From the processing toolbox, open the iso-area as polygon from layer dialog window again.</p>
+<p>Fill in the required fields as shown in Figure 7.72. Make sure that fastest path (time optimization) is selected for the path type to calculate.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-8734527C.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.72</figcaption><p></p>
+</figure>
+</div>
+<p>Click on run. After the process has finished running, there should be 2 new output layers in QGIS, as shown in Figure 7.73.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-D201AD13.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.73</figcaption><p></p>
+</figure>
+</div>
+<p>We only need the polygon, which should be labelled as 'output polygon' in the layers panel. Right click on this layer and export it as a geopackage file. Name it '10 mins Iso-Area Polygons'</p>
+</section>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4"></h2>
+<p><strong>Creating Printed Map Layouts</strong></p>
+<p>To create a printed map layout, click on Project from the menu bar. Click on new print layout. We will create a printed map layout for the accessibility to sec schools in 2018 as an example.</p>
+<p>After clicking on 'new print layout', there should be a prompt to enter the name of the printed map layout. Enter '2018 Sec Schools Accessibility' and click ok.</p>
+<p>In the layout manager, from the menu bar, click on zoom full <img src="file:///C:/Users/User/AppData/Local/Temp/msohtmlclip1/01/clip_image002.gif" class="img-fluid">&nbsp;&nbsp;to see the full extent</p>
 <p>&nbsp;</p>
+<p>To add the map onto the printed layout, click on 'Add item' &gt; 'Add Map'. Click and drag to draw a rectangle where you want to place the map, as shown in Figure 7.74</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-5F3EAAA6.png" width="500" height="360" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 7.74</figcaption><p></p>
+</figure>
+</div>
+<p>Release the mouse. The map should be added in, as shown in Figure 7.75</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-AA36AE3E.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.75</figcaption><p></p>
+</figure>
+</div>
+<p>Make sure that the 'lock layers' and 'lock style for layers' checkboxes are ticked as well. This is to ensure that any changes made to the map will not affect the printed layout that we are creating. Your 'item properties' panel should look similar to Figure 7.76</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-1E384379.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.76</figcaption><p></p>
+</figure>
+</div>
+<p>To add the legend for the map, click on add item, add legend. Drag the cursor out on an empty space, and a legend will appear. Under item properties, scroll down and click on the checkbox next to only show items inside linked map, as shown in Figure 7.77</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-F0E6026E.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.77</figcaption><p></p>
+</figure>
+</div>
+<p>Your printed layout should look similar to Figure 7.78</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-10D50CEC.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.78</figcaption><p></p>
+</figure>
+</div>
+<p>A scale bar is needed as well. From the menu bar, click on Add item &gt; Add scale bar. Drag and release the mouse on the area you want to add the scale bar in. Set the properties of the scale bar to be as such in Figure 7.79</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-6A28F1C1.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.79</figcaption><p></p>
+</figure>
+</div>
+<p>Your scale bar should look similar to the one in Figure 7.80</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-4EB0B6C6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 7.80</figcaption><p></p>
+</figure>
+</div>
+<p>Next, we will add a North arrow. From the menu bar, click on Add item &gt; Add North Arrow</p>
+<p>Drag the mouse over the area you want to add the north arrow in, and release it to add it. Your printed layout should look similar to Figure 7.81</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-98269790.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.81</figcaption><p></p>
+</figure>
+</div>
+<p>We will now add a title to this layout. Click on Add item &gt; Add label. Similarly to the other steps, drag the mouse over the area you want to add the text in, and release the mouse to add a textbox.</p>
+<p>Under the item properties, type in the text 'Secondary School Accessibility 2018'. Click on the small arrow next to font to adjust the font size to 24 points. Align the horizontal and vertical alignment to be the centre as well. The result should look something like Figure 7.82</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-71DDD160.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.82</figcaption><p></p>
+</figure>
+</div>
+<p>Next, we will add coordinates and a grid for the map. Click on the map first.</p>
+<p>Scroll down to grids and click on the addition logo to add a grid to the map. After that, select 'grid 1' and click on modify grid. Set the X and Y intervals to 15000 each. Click the arrow beside line style and decrease the opacity of the lines as well. Scroll down to the 'draw coordinates' section and click on the checkbox. Select 'show all' for the left and top coordinates, but select 'disabled' for the right and bottom ones, as in Figure 7.83</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-F3975C80.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Figure 7.83</figcaption><p></p>
+</figure>
+</div>
+<p>After that, increase the distance to map frame and change the coordinate precision to improve the aesthetics of the grid, as shown in Figure 7.84</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-55ACBE4C.png" class="img-fluid figure-img" width="300"></p>
+<p></p><figcaption class="figure-caption">Figure 7.84</figcaption><p></p>
+</figure>
+</div>
+<p>The resulting print layout should look similar to Figure 7.85</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-DEBD9AD4.png" class="img-fluid figure-img" width="600"></p>
+<p></p><figcaption class="figure-caption">Figure 7.85</figcaption><p></p>
+</figure>
+</div>
+<p>Export the printed map layout as an image. To do this, select Layout from the menu bar, and click on 'export as image'</p>
+<p>Repeat section 7.4 to create other printed map layouts that are needed.</p>
 <p><br>
 </p>
 
